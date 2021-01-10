@@ -1,0 +1,30 @@
+.explore{
+    @include padding;
+    &__btn{
+        @include btn;
+        @include shadow;
+    }
+}
+
+@media screen and (max-width: 739px){
+    .explore{
+        background-color: $grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em 3em;
+        &__title{
+            font-size: 1.5em;
+            font-weight: 1000;
+            margin: 0;
+        }
+        &__text{
+            color: grey;
+            font-size: 0.9em;
+        }
+        &__btn{
+            margin: 1em 1em;
+        }
+    }
+}

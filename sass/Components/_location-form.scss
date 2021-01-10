@@ -30,13 +30,16 @@
         padding: 1em 0;
         justify-content: center;
         &__icon{
-            padding: 0 1em;
+            padding: 0 7px;
             border: 0;
             background: none;
+
         }
         &__input{
             background-color: $dark-grey;
+            font-weight: bold;
             border: 0;
+            width: 135px;
         }
         &__btn{
             display: none;

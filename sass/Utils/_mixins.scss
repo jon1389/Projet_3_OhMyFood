@@ -6,6 +6,30 @@
     border: .1rem solid $colour;
 }
 
-@mixin padding ($size:1em){
+@mixin padding {
     padding: 1em 1em;
+}
+
+@mixin btn {
+    @include gradient();
+    padding: 1em 1.5em;    
+    border: none;
+    border-radius: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+@mixin shadow {
+    box-shadow: 5px 5px 6px $dark-grey;
+}
+
+@mixin link-btn {
+    border: 0;
+    background-color: $grey;
+    @include padding();
+    border-radius: 1em;
+    height: 2.5em;
+    margin: 10px 15px;
+    @include shadow();
+    
 }

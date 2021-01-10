@@ -23,7 +23,7 @@ body {
     justify-content: center;
   }
   .header__logo {
-    max-width: 12em;
+    max-width: 9em;
     padding-bottom: 0.5em;
   }
 }
@@ -62,16 +62,113 @@ body {
     justify-content: center;
   }
   .location__icon {
-    padding: 0 1em;
+    padding: 0 7px;
     border: 0;
     background: none;
   }
   .location__input {
     background-color: #dfdfdf;
+    font-weight: bold;
     border: 0;
+    width: 135px;
   }
   .location__btn {
     display: none;
   }
+}
+
+.explore {
+  padding: 1em 1em;
+}
+
+.explore__btn {
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 1.5em;
+  color: white;
+  cursor: pointer;
+  box-shadow: 5px 5px 6px #dfdfdf;
+}
+
+@media screen and (max-width: 739px) {
+  .explore {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2em 3em;
+  }
+  .explore__title {
+    font-size: 1.5em;
+    font-weight: 1000;
+    margin: 0;
+  }
+  .explore__text {
+    color: grey;
+    font-size: 0.9em;
+  }
+  .explore__btn {
+    margin: 1em 1em;
+  }
+}
+
+.operation {
+  padding: 1em 1em;
+}
+
+.operation__part {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation__link {
+  border: 0;
+  background-color: #f2f2f2;
+  padding: 1em 1em;
+  border-radius: 1em;
+  height: 2.5em;
+  margin: 10px 15px;
+  box-shadow: 5px 5px 6px #dfdfdf;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.operation__link:hover {
+  background-color: #f0e6fc;
+}
+
+.operation__link:hover .operation__icon {
+  color: #9356dc;
+}
+
+.operation__circle {
+  display: flex;
+  align-items: center;
+  border: 0;
+  width: 8px;
+  height: 8px;
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: #9356dc;
+  position: absolute;
+  left: 20px;
+}
+
+.operation__number {
+  color: white;
+  font-size: 0.8em;
+}
+
+.operation__icon {
+  color: grey;
+  margin: 0 1em;
+}
+
+.operation__text {
+  color: black;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
