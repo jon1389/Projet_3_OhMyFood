@@ -1,0 +1,11 @@
+@mixin gradient {
+    background: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
+}
+
+@mixin border($colour:$colour-primary) {
+    border: .1rem solid $colour;
+}
+
+@mixin padding ($size:1em){
+    padding: 1em 1em;
+}

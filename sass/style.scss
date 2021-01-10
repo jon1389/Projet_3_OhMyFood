@@ -2,8 +2,5 @@
 @import "./Utils/mixins";
 @import "./base/base";
 @import "./Base/typography";
-
-
-li{
-    border: 2px red dashed;
-}
+@import "./layout/header";
+@import "./Components/location-form"

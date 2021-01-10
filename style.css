@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -7,7 +12,66 @@ body {
   font-family: 'Shrikhand', cursive;
 }
 
-li {
-  border: 2px red dashed;
+.header__logo {
+  max-width: 18em;
+  padding: 1em 1em;
+}
+
+@media screen and (max-width: 739px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  .header__logo {
+    max-width: 12em;
+    padding-bottom: 0.5em;
+  }
+}
+
+.location {
+  display: flex;
+  padding-left: 1em;
+}
+
+.location__icon {
+  border: 0.1rem solid black;
+  padding: 0.5em 0.5em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+
+.location__input {
+  border: 0.1rem solid black;
+  margin: 0 -1px;
+  padding-left: 0.5em;
+}
+
+.location__btn {
+  border: 0.1rem solid black;
+  color: white;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+
+@media screen and (max-width: 739px) {
+  .location {
+    background-color: #dfdfdf;
+    padding: 1em 0;
+    justify-content: center;
+  }
+  .location__icon {
+    padding: 0 1em;
+    border: 0;
+    background: none;
+  }
+  .location__input {
+    background-color: #dfdfdf;
+    border: 0;
+  }
+  .location__btn {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
