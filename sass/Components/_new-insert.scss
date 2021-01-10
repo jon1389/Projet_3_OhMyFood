@@ -1,0 +1,11 @@
+.card__new{
+    @include insert-new;
+    left: 18em;
+    bottom: -4em;
+}
+
+.card__new--2{
+    @include insert-new;
+    left: 18em;
+    bottom: -23em;
+}

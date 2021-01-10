@@ -5,5 +5,14 @@ body{
 }
 
 .header{
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Shrikhand', cursive, sans-serif;
+}
+
+.footer{
+    &__title{
+        font-family: 'Shrikhand', cursive, sans-serif;
+        font-size: 1.1em;
+        font-weight: lighter;
+        color: white;
+    }
 }

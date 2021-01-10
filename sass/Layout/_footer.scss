@@ -1,0 +1,16 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background: rgb(40, 40, 40);
+    text-decoration: none;
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+    &__link{
+        text-decoration: none;
+        color: white;
+        margin-bottom: 0.5em;
+    }
+}

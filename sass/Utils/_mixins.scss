@@ -33,3 +33,13 @@
     @include shadow();
     
 }
+
+@mixin insert-new {
+    position: absolute;
+    padding: 5px 15px;
+    border-radius: 0.1em;
+    background-color: $colour-tertiary;
+    color: #149c7a;
+    font-size: 0.9em;
+    font-weight: bold;
+}
