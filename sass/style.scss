@@ -2,11 +2,14 @@
 @import "./Utils/mixins";
 @import "./base/base";
 @import "./Base/typography";
-@import "./layout/header";
+@import "./Components/likeButton";
 @import "./Components/location-form";
 @import "./Components/explore";
 @import "./Components/operation";
-@import "./Layout/img-card";
-@import "./Layout/footer";
 @import "./Components/new-insert";
+@import "./layout/header";
+@import "./Layout/restaurant-card";
+@import "./Layout/footer";
+@import "./Layout/menu-page";
+
 

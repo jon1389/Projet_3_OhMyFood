@@ -1,11 +1,10 @@
 .card__new{
     @include insert-new;
-    left: 18em;
-    bottom: -4em;
-}
-
-.card__new--2{
-    @include insert-new;
-    left: 18em;
-    bottom: -23em;
+    display: grid;
+    grid-column-start: 4;
+    grid-row: 1;
+    z-index: 2;
+    max-width: 60px;
+    max-height: 20px;
+    align-self: center;
 }

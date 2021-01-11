@@ -1,12 +1,29 @@
-.header__logo{
-    max-width: 18em;
-    @include padding;
+.header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    &__logo{
+        max-width: 18em;
+        grid-column: 2;
+        justify-self: center;
+        @include padding;
+    }
 }
+
+.return{
+    display: flex;
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: 1.5em;
+    &__icon{
+        color: black;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
 
 @media screen and (max-width: 739px){
     .header{
-        display: flex;
-        justify-content: center;
         &__logo{
             max-width: 9em;
             padding-bottom: 0.5em;

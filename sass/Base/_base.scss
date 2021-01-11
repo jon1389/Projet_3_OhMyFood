@@ -6,3 +6,9 @@ body{
 .footer{
     @include padding;
 }
+
+.operation, .restaurant{
+    max-width: 1500px;
+    margin: auto;
+}
+

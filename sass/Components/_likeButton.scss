@@ -1,0 +1,23 @@
+.likeButton{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    height: 2rem;
+    width: 2rem;    
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    &__icon{
+        font-size: 2em;
+    }
+    &__like--desactive {
+        display: none;
+      }
+    &:hover{
+        @include gradient
+    }
+}
+
+    
