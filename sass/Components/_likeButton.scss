@@ -1,23 +1,29 @@
 .likeButton{
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    position: relative;
-    height: 2rem;
-    width: 2rem;    
-    background-color: transparent;
-    padding: 0;
     border: none;
+    background-color: transparent;
     cursor: pointer;
     &__icon{
         font-size: 2em;
+        height: 1em;
     }
-    &__like--desactive {
+
+    &__unlike{
         display: none;
-      }
-    &:hover{
-        @include gradient
+        align-items:center;
+        justify-content:center;
+        position: relative;
+        height: 2rem;
+        width: 2rem;    
+        padding: 0;
+        border: none;
+        left: 33px;
+        &:hover{
+            background: -webkit-linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip : text;
+            -webkit-text-fill-color : transparent;
+        }
     }
+
 }
 
     
