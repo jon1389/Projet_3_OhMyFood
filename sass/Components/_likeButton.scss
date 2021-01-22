@@ -6,21 +6,29 @@
         font-size: 2em;
         height: 1em;
     }
-
     &__unlike{
-        display: none;
+        position: relative;
+        left: 34px;
+
+    }
+    &__like{
+        display: flex;
         align-items:center;
         justify-content:center;
         position: relative;
-        height: 2rem;
-        width: 2rem;    
-        padding: 0;
+        color: transparent;
+        font-size: 1.65em;
+        bottom: 0.13rem;
+        height: 1em;
+        width: 2.1rem;    
         border: none;
-        left: 33px;
+        opacity:0;
+        transition: opacity 1s;
         &:hover{
-            background: -webkit-linear-gradient($colour-primary, $colour-secondary);
+            background-image: -webkit-linear-gradient($colour-primary, $colour-secondary);
             -webkit-background-clip : text;
             -webkit-text-fill-color : transparent;
+            opacity: 1;
         }
     }
 

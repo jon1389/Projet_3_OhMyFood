@@ -29,6 +29,7 @@
 }
 
 .submenu{
+    width: 100%;
     &__title {
         text-transform: uppercase;
         position: relative;
@@ -41,13 +42,13 @@
     }
     &__items{
         display: flex;
-        justify-content: space-between;
         align-items: center;
         @include link-btn;
         background-color: white;
         cursor: pointer;
         overflow: hidden;
-        max-width: 100%;
+        width: 90%;
+        border: 1px red dashed;
     }
 }
 .item{

@@ -1,5 +1,5 @@
 @mixin gradient {
-    background-image: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
+    background: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
 }
 
 @mixin border($colour:$colour-primary) {

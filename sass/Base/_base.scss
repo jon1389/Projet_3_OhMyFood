@@ -7,8 +7,7 @@ body{
     @include padding;
 }
 
-.operation, .restaurant{
+.operation, .restaurant, .menu, .menu__img{
     max-width: 1500px;
     margin: auto;
 }
-

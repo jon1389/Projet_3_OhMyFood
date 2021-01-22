@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/style.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jon1389/JonathanNguyen_3_10122020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jon1389/JonathanNguyen_3_10122020/issues"
+  },
+  "homepage": "https://github.com/jon1389/JonathanNguyen_3_10122020#readme"
+}

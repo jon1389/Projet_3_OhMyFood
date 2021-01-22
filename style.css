@@ -8,7 +8,7 @@ body {
   padding: 1em 1em;
 }
 
-.operation, .restaurant {
+.operation, .restaurant, .menu, .menu__img {
   max-width: 1500px;
   margin: auto;
 }
@@ -40,21 +40,30 @@ body {
 }
 
 .likeButton__unlike {
-  display: none;
+  position: relative;
+  left: 34px;
+}
+
+.likeButton__like {
+  display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 2rem;
-  width: 2rem;
-  padding: 0;
+  color: transparent;
+  font-size: 1.65em;
+  bottom: 0.13rem;
+  height: 1em;
+  width: 2.1rem;
   border: none;
-  left: 33px;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.likeButton__unlike:hover {
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
+.likeButton__like:hover {
+  background-image: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
 .location {
@@ -91,7 +100,7 @@ body {
 
 .explore__title {
   font-size: 1.5em;
-  font-weight: 1000;
+  font-weight: 900;
   margin: 0;
 }
 
@@ -102,7 +111,7 @@ body {
 
 .explore__btn {
   margin: 1em 1em;
-  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   padding: 1em 1.5em;
   border: none;
@@ -139,6 +148,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
+  max-width: 100%;
 }
 
 .operation__link:hover {
@@ -255,6 +265,7 @@ body {
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
+  width: 100%;
 }
 
 .card {
@@ -370,6 +381,10 @@ body {
   padding: 1em 1em;
 }
 
+.submenu {
+  width: 100%;
+}
+
 .submenu__title {
   text-transform: uppercase;
   position: relative;
@@ -384,7 +399,6 @@ body {
 
 .submenu__items {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border: 0;
   background-color: #f2f2f2;
@@ -397,7 +411,8 @@ body {
   background-color: white;
   cursor: pointer;
   overflow: hidden;
-  max-width: 100%;
+  width: 90%;
+  border: 1px red dashed;
 }
 
 .item {
