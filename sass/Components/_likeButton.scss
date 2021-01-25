@@ -8,7 +8,15 @@
     }
     &__unlike{
         position: relative;
+        background-color:none;
         left: 34px;
+        z-index: 2;
+        &:hover + .likeButton__like{
+            background-image: -webkit-linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip : text;
+            -webkit-text-fill-color : transparent;
+            opacity: 1;
+        }
 
     }
     &__like{
@@ -17,19 +25,12 @@
         justify-content:center;
         position: relative;
         color: transparent;
-        font-size: 1.65em;
-        bottom: 0.13rem;
+        font-size: 1.9em;
         height: 1em;
         width: 2.1rem;    
         border: none;
         opacity:0;
         transition: opacity 1s;
-        &:hover{
-            background-image: -webkit-linear-gradient($colour-primary, $colour-secondary);
-            -webkit-background-clip : text;
-            -webkit-text-fill-color : transparent;
-            opacity: 1;
-        }
     }
 
 }

@@ -12,5 +12,8 @@
         text-decoration: none;
         color: white;
         margin-bottom: 0.5em;
+        &:hover{
+            color: $colour-primary;
+        }
     }
 }

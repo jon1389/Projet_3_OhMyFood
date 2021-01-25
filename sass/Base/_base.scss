@@ -7,7 +7,21 @@ body{
     @include padding;
 }
 
-.operation, .restaurant, .menu, .menu__img{
+.operation, .restaurant{
     max-width: 1500px;
     margin: auto;
+}
+
+
+.submenus{
+    display: flex;
+    column-gap: 3em;
+}
+
+@media screen and (max-width :1395px){
+.submenus{
+    display: flex;
+    flex-direction: column;
+}
+
 }

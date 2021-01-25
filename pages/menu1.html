@@ -20,94 +20,129 @@
         <main class="menu">
             <header class="menu__header">
                 <h2 class="menu__title">La palette du goût</h2>
-                <button class="likeButton">
-                    <button class="likeButton">
-                        <i class="likeButton__icon likeButton__unlike far fa-heart"></i>
-                        <i class="likeButton__icon likeButton__like fas fa-heart"></i>
-                    </button>           
+                <button class="menu__likeButton likeButton">
+                    <i class="likeButton__icon likeButton__unlike far fa-heart"></i>
+                    <i class="likeButton__icon likeButton__like fas fa-heart"></i>
+                </button>           
             </header>
             <section class="submenus">
                 <section class="submenu starter">
                     <h3 class="submenu__title">Entrées</h3>
-                    <section class="submenu__items">
-                        <article class="item">
-                            <h4 class="item__title">Fricassée d'escargot</h4>
-                            <p class="item__subtitle">Au piment d'espelette</p>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Fricassée d'escargot</h4>
+                            <p class="submenuItems__subtitle">Au piment d'espelette</p>
                         </article>
-                        <span class="item__price">25€</span>
-                        <div class="item__confirmation">
-                            <div class="item__wrapIcon">
-                              <i class="item__icon fas fa-check"></i>
+                        <span class="submenuItems__price">25€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                              <i class="submenuItems__icon fas fa-check"></i>
                             </div>
                         </div>
                     </section>
-                    <section class="submenu__items">
-                        <article class="item">
-                            <h4 class="item__title">Foie gras de canard mi-cuit</h4>
-                            <p class="item__subtitle">Et ses copeaux de truffe noire</p>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Foie gras de canard mi-cuit</h4>
+                            <p class="submenuItems__subtitle">Et ses copeaux de truffe noire</p>
                         </article>
-                        <span class="item__price">35€</span>
-                        <div class="item__confirmation">
-                            <div class="item__wrapIcon">
-                              <i class="item__icon fas fa-check"></i>
+                        <span class="submenuItems__price">35€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                              <i class="submenuItems__icon fas fa-check"></i>
                             </div>
                         </div>
                     </section>
-                    <section class="submenu__items">
-                        <article class="item">
-                            <h4 class="item__title">Oeuf au plat</h4>
-                            <p class="item__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Oeuf au plat</h4>
+                            <p class="submenuItems__subtitle">Assaisoné à la truffe sur lit de caviar</p>
                         </article>
-                        <span class="item__price">35€</span>
-                        <div class="item__confirmation">
-                            <div class="item__wrapIcon">
-                              <i class="item__icon fas fa-check"></i>
+                        <span class="submenuItems__price">20€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                              <i class="submenuItems__icon fas fa-check"></i>
                             </div>
                         </div>
                     </section>
-                    <section class="submenu plate">
-                        <h3 class="submenu__title">Plats</h3>
-                        <section class="submenu__items">
-                            <article class="item">
-                                <h4 class="item__title">Filet de boeuf aux herbes</h4>
-                                <p class="item__subtitle">Accompagné de sa ribambelle de légumes</p>
-                            </article>
-                            <span class="item__price">40€</span>
-                            <div class="item__confirmation">
-                                <div class="item__wrapIcon">
-                                  <i class="item__icon fas fa-check"></i>
-                                </div>
+                </section>
+                <section class="submenu plate">
+                    <h3 class="submenu__title">Plats</h3>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Filet de boeuf aux herbes</h4>
+                            <p class="submenuItems__subtitle">Accompagné de sa ribambelle de légumes</p>
+                        </article>
+                        <span class="submenuItems__price">40€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                                <i class="submenuItems__icon fas fa-check"></i>
                             </div>
-                        </section>
-                        <section class="submenu__items">
-                            <article class="item">
-                                <h4 class="item__title">Parmentier de queue de boeuf</h4>
-                                <p class="item__subtitle">À la truffe noire sur sa puréee de panais</p>
-                            </article>
-                            <span class="item__price">35€</span>
-                            <div class="item__confirmation">
-                                <div class="item__wrapIcon">
-                                  <i class="item__icon fas fa-check"></i>
-                                </div>
+                        </div>
+                    </section>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Parmentier de queue de boeuf</h4>
+                            <p class="submenuItems__subtitle">À la truffe noire sur sa puréee de panais</p>
+                        </article>
+                        <span class="submenuItems__price">35€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                                <i class="submenuItems__icon fas fa-check"></i>
                             </div>
-                        </section>
-                        <section class="submenu__items">
-                            <article class="item">
-                                <h4 class="item__title">Filet de Turbot</h4>
-                                <p class="item__subtitle">Aux agrumes</p>
-                            </article>
-                            <span class="item__price">44€</span>
-                            <div class="item__confirmation">
-                                <div class="item__wrapIcon">
-                                  <i class="item__icon fas fa-check"></i>
-                                </div>
+                        </div>
+                    </section>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Filet de Turbot</h4>
+                            <p class="submenuItems__subtitle">Aux agrumes</p>
+                        </article>
+                        <span class="submenuItems__price">44€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                                <i class="submenuItems__icon fas fa-check"></i>
                             </div>
-                        </section>
-            </section>
-                
-
-            </section>
-
+                        </div>
+                    </section>
+                </section>
+                <section class="submenu dessert">
+                    <h3 class="submenu__title">dessert</h3>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Paris-Brest</h4>
+                            <p class="submenuItems__subtitle">Revisité</p>
+                        </article>
+                        <span class="submenuItems__price">18€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                                <i class="submenuItems__icon fas fa-check"></i>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Macaron au chocolat d'exception</h4>
+                            <p class="submenuItems__subtitle">Et glace à la vanille de Madagascar</p>
+                        </article>
+                        <span class="submenuItems__price">22€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                                <i class="submenuItems__icon fas fa-check"></i>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="submenuItems">
+                        <article class="submenuItems__item">
+                            <h4 class="submenuItems__title">Mousse au chocolat</h4>
+                            <p class="submenuItems__subtitle">Au piment d'espelette et à la truffe noire</p>
+                        </article>
+                        <span class="submenuItems__price">23€</span>
+                        <div class="submenuItems__confirmation">
+                            <div class="submenuItems__wrapIcon">
+                                <i class="submenuItems__icon fas fa-check"></i>
+                            </div>
+                        </div>
+                    </section>
+                </section>
         </main>
 
 </body>
