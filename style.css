@@ -37,22 +37,15 @@ body {
 .menu__title {
   font-family: "Shrikhand", "cursive";
   margin-bottom: 0;
+  font-size: 2em;
+}
+
+.submenuItems__title {
+  font-size: 1.2em;
 }
 
 .submenuItems__subtitle {
-  font-size: 0.8em;
-}
-
-@media screen and (max-width: 415px) {
-  .submenuItems__title {
-    font-size: 0.9em;
-  }
-  .submenuItems__subtitle {
-    font-size: 0.7em;
-  }
-  .submenuItems__price {
-    font-size: 0.9em;
-  }
+  font-size: 1em;
 }
 
 @keyframes appearance {
@@ -74,7 +67,10 @@ body {
 
 .likeButton__icon {
   font-size: 2em;
-  height: 1em;
+}
+
+.likeButton__icon--menu {
+  padding-top: 0.8em;
 }
 
 .likeButton__unlike {
@@ -98,7 +94,6 @@ body {
   position: relative;
   color: transparent;
   font-size: 1.9em;
-  height: 1em;
   width: 2.1rem;
   border: none;
   opacity: 0;
@@ -409,18 +404,25 @@ body {
   max-height: 32rem;
   max-width: 100%;
   width: 100%;
+  z-index: -1;
   object-fit: cover;
 }
 
 @media screen and (max-width: 415px) {
   .menu__img {
-    max-height: 25rem;
+    height: 15rem;
+  }
+}
+
+@media screen and (min-width: 416px) and (max-width: 1024px) {
+  .menu__img {
+    max-height: 20rem;
   }
 }
 
 .menu {
   background-color: #f2f2f2;
-  z-index: 1;
+  z-index: 2;
 }
 
 .menu__header {
@@ -430,8 +432,8 @@ body {
   justify-content: space-between;
   background-color: #f2f2f2;
   padding: 1em 1em;
-  z-index: 1;
   margin-top: -4em;
+  margin-bottom: 1.5em;
   border-radius: 2em 2em 0 0;
 }
 
@@ -495,13 +497,14 @@ body {
   margin: 10px 15px;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   width: 100%;
+  height: 2em;
   display: flex;
   align-items: center;
   background-color: white;
   cursor: pointer;
   padding: 16px 0;
   padding-left: 16px;
-  margin: 1em 0;
+  margin: 1.5em 0;
   overflow: hidden;
   white-space: nowrap;
   animation: appearance 1000ms both;
@@ -546,12 +549,14 @@ body {
 @media screen and (max-width: 415px) {
   .submenuItems {
     min-width: 91%;
+    margin: 1em 0;
   }
 }
 
 @media screen and (min-width: 416px) and (max-width: 1024px) {
   .submenuItems {
     min-width: 95%;
+    margin: 1em 0;
   }
 }
 
@@ -563,7 +568,7 @@ body {
 }
 
 .submenuItems__title {
-  margin-bottom: 0;
+  margin: 0.8em 0 0 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -626,7 +631,7 @@ body {
   background-color: #f2f2f2;
   display: flex;
   justify-content: center;
-  padding: 1.5em 0 2.5em 0;
+  padding: 2.5em 0 3em 0;
 }
 
 .order__btn {
@@ -639,11 +644,19 @@ body {
   color: white;
   cursor: pointer;
   transition-duration: 0.4s;
-  width: 150px;
+  font-size: 1.2em;
+  width: 250px;
 }
 
 .order__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+}
+
+@media screen and (max-width: 415px) {
+  .order__btn {
+    width: 150px;
+    padding: 1.5em 0 2.5em 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

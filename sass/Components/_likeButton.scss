@@ -3,8 +3,10 @@
     background-color: transparent;
     cursor: pointer;
     &__icon{
-        font-size: 2em;
-        height: 1em;
+        font-size: 2em; 
+        &--menu{
+            padding-top: 0.8em;   
+        }
     }
     &__unlike{
         position: relative;
@@ -17,7 +19,6 @@
             -webkit-text-fill-color : transparent;
             opacity: 1;
         }
-
     }
     &__like{
         display: flex;
@@ -26,7 +27,6 @@
         position: relative;
         color: transparent;
         font-size: 1.9em;
-        height: 1em;
         width: 2.1rem;    
         border: none;
         opacity:0;

@@ -21,25 +21,16 @@ body{
     &__title{
         font-family: "Shrikhand", "cursive";
         margin-bottom: 0;
+        font-size: 2em;
+
     }
 }
 
 .submenuItems{
-    &__subtitle{
-        font-size: 0.8em;
+    &__title{
+        font-size: 1.2em;
     }
-}
-
-@media screen and (max-width: 415px){
-    .submenuItems{
-        &__title{
-            font-size: 0.9em;
-        }
-        &__subtitle{
-            font-size: 0.7em;
-        }
-        &__price{
-            font-size: 0.9em;
-        }
+    &__subtitle{
+        font-size: 1em;
     }
 }
