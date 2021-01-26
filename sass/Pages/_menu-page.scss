@@ -1,13 +1,16 @@
 .menu__img{
     max-height: 32rem;
+    max-width: 100%;
     width: 100%;
     object-fit: cover;
-    display: flex;
-    align-items: center;
+    @media screen and (max-width: 415px){
+        max-height: 25rem;
+        }
 }
 
 .menu{
     background-color: $grey-clear;
+    z-index: 1;
     &__header{
         position: relative;
         display: flex;
@@ -19,9 +22,6 @@
         margin-top: -4em;
         border-radius: 2em 2em 0 0;
     }
-    &__title{
-        font-family: "Shrikhand", "cursive";
-    }
     &__likeButton{
         margin-right: 5%;
     }
@@ -29,15 +29,30 @@
 
 
 .submenus{
-    display: flex;
-    @include padding;
+    padding: 0 0;
+    padding-left: 1em;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    @media screen and (max-width: 415px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        row-gap: 1.5em;
+    }
+    @media screen and (min-width: 416px) and (max-width: 1024px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 1.5em;
+    }
 }
 
 .submenu{
+    overflow: hidden;
     &__title {
         text-transform: uppercase;
         position: relative;
         padding-bottom: 0.5rem;
+        margin-top: 0;
         font-weight: normal;
         &::after {
             content: "";
@@ -52,9 +67,8 @@
 }
 
 .submenuItems{
+    max-width: 90%;
     @include link-btn;
-    width: 400px;
-    max-width: 400px;
     display: flex;
     align-items: center;
     background-color: white;
@@ -62,45 +76,57 @@
     padding: 16px 0;
     padding-left: 16px;
     margin: 1em 0;
-    text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    animation: appearance $anim-duration both;
+    @for $i from 1 through $num-items{
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+    @media screen and (max-width: 415px){
+        min-width: 91%;
+    }
+    @media screen and (min-width: 416px) and (max-width: 1024px){
+            min-width: 95%;
+    }
     &__item{
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
         flex: 1;
-        }
+    }
     &__title{
         margin-bottom: 0;
+        white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        white-space: nowrap;
     }
     &__subtitle{
         margin-top: 0.4em;
+        white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        white-space: nowrap;
     }
     &__price {
         font-weight: bold;
         display: flex;
-        justify-self: end;
+        justify-items: flex-end;
         align-self: flex-end;
         padding: 0 1.5rem;
+        margin-bottom: -0.2em;
+
+        
     }
     &__confirmation{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-top-right-radius: 1em;
-        border-bottom-right-radius: 1em;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition-duration: 0.5s;
         background-color: $colour-tertiary;
         height: 73px;
-        width: 4em;
-        margin: -1rem -5rem -1rem 1rem;
-        transition-duration: 0.5s;
     }
     &:hover &__confirmation {
         margin-right: 0;
@@ -116,8 +142,8 @@
         border-radius: 50%;
         background-color: white;
         color: $colour-tertiary;
-        transform: rotate(180deg);
-        transition-duration: 0.5s;
+        transform: rotate(-360deg);
+        transition-duration: 0.6s;
     }
     &:hover &__wrapIcon{
         transform: rotate(0);
@@ -127,10 +153,13 @@
     }
 }
 
-
-.submenu__items{
-    &:hover + .item__confirmation{
-        transform: scale(1);
-    } 
+.order{
+    background-color: $grey-clear;
+    display: flex;
+    justify-content: center;
+    padding: 1.5em 0 2.5em 0;
+    &__btn{
+        @include btn;
+        width: 150px;
+    }
 }
-        

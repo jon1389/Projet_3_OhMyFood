@@ -15,7 +15,10 @@
         grid-column-gap: 1em;
         grid-row-gap: 1em;
         width: 100%;
-
+        @media screen and (max-width: 739px){
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 .card{ 
@@ -26,6 +29,9 @@
     margin-bottom: 1em;
     height: 18em;
     @include shadow;
+    @media screen and (max-width: 739px){
+        height: 16em;
+    }
     &__figure{
         margin: 0;
         display: grid;
@@ -42,6 +48,9 @@
         grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: span 2;
+        @media screen and (max-width: 739px){
+            height: 11em;
+        }
     }
     &__FigureCaption{
         max-height: 5em;
@@ -62,21 +71,5 @@
     }
     &__subtitle{
         margin-top: 0.5em;
-    }
-}
-
-
-@media screen and (max-width: 739px){
-    .restaurant{
-        &__card{
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    .card{
-        height: 16em;
-        &__img{
-            height: 11em;
-        }
     }
 }

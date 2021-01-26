@@ -16,3 +16,30 @@ body{
         color: white;
     }
 }
+
+.menu{
+    &__title{
+        font-family: "Shrikhand", "cursive";
+        margin-bottom: 0;
+    }
+}
+
+.submenuItems{
+    &__subtitle{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 415px){
+    .submenuItems{
+        &__title{
+            font-size: 0.9em;
+        }
+        &__subtitle{
+            font-size: 0.7em;
+        }
+        &__price{
+            font-size: 0.9em;
+        }
+    }
+}

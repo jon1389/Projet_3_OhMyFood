@@ -8,7 +8,7 @@ body {
   padding: 1em 1em;
 }
 
-.operation, .restaurant {
+.operation, .restaurant, .menu, .menu__img, .order, .footer__container {
   max-width: 1500px;
   margin: auto;
 }
@@ -16,13 +16,7 @@ body {
 .submenus {
   display: flex;
   column-gap: 3em;
-}
-
-@media screen and (max-width: 1395px) {
-  .submenus {
-    display: flex;
-    flex-direction: column;
-  }
+  justify-content: center;
 }
 
 body {
@@ -38,6 +32,38 @@ body {
   font-size: 1.1em;
   font-weight: lighter;
   color: white;
+}
+
+.menu__title {
+  font-family: "Shrikhand", "cursive";
+  margin-bottom: 0;
+}
+
+.submenuItems__subtitle {
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 415px) {
+  .submenuItems__title {
+    font-size: 0.9em;
+  }
+  .submenuItems__subtitle {
+    font-size: 0.7em;
+  }
+  .submenuItems__price {
+    font-size: 0.9em;
+  }
+}
+
+@keyframes appearance {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .likeButton {
@@ -211,6 +237,7 @@ body {
   }
   .operation__link {
     width: auto;
+    margin: 1em 0.5em;
   }
 }
 
@@ -284,6 +311,13 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 739px) {
+  .restaurant__card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .card {
   text-decoration: none;
   color: black;
@@ -292,6 +326,12 @@ body {
   margin-bottom: 1em;
   height: 18em;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 739px) {
+  .card {
+    height: 16em;
+  }
 }
 
 .card__figure {
@@ -311,6 +351,12 @@ body {
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: span 2;
+}
+
+@media screen and (max-width: 739px) {
+  .card__img {
+    height: 11em;
+  }
 }
 
 .card__FigureCaption {
@@ -333,23 +379,13 @@ body {
   margin-top: 0.5em;
 }
 
-@media screen and (max-width: 739px) {
-  .restaurant__card {
-    display: flex;
-    flex-direction: column;
-  }
-  .card {
-    height: 16em;
-  }
-  .card__img {
-    height: 11em;
-  }
+.footer {
+  background: #282828;
 }
 
-.footer {
+.footer__container {
   display: flex;
   flex-direction: column;
-  background: #282828;
   text-decoration: none;
 }
 
@@ -371,14 +407,20 @@ body {
 
 .menu__img {
   max-height: 32rem;
+  max-width: 100%;
   width: 100%;
   object-fit: cover;
-  display: flex;
-  align-items: center;
+}
+
+@media screen and (max-width: 415px) {
+  .menu__img {
+    max-height: 25rem;
+  }
 }
 
 .menu {
   background-color: #f2f2f2;
+  z-index: 1;
 }
 
 .menu__header {
@@ -393,23 +435,43 @@ body {
   border-radius: 2em 2em 0 0;
 }
 
-.menu__title {
-  font-family: "Shrikhand", "cursive";
-}
-
 .menu__likeButton {
   margin-right: 5%;
 }
 
 .submenus {
-  display: flex;
-  padding: 1em 1em;
+  padding: 0 0;
+  padding-left: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1em;
+}
+
+@media screen and (max-width: 415px) {
+  .submenus {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1.5em;
+  }
+}
+
+@media screen and (min-width: 416px) and (max-width: 1024px) {
+  .submenus {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1.5em;
+  }
+}
+
+.submenu {
+  overflow: hidden;
 }
 
 .submenu__title {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
+  margin-top: 0;
   font-weight: normal;
 }
 
@@ -424,6 +486,7 @@ body {
 }
 
 .submenuItems {
+  max-width: 90%;
   border: 0;
   background-color: #f2f2f2;
   padding: 1em 1em;
@@ -432,8 +495,6 @@ body {
   margin: 10px 15px;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   width: 100%;
-  width: 400px;
-  max-width: 400px;
   display: flex;
   align-items: center;
   background-color: white;
@@ -441,9 +502,57 @@ body {
   padding: 16px 0;
   padding-left: 16px;
   margin: 1em 0;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  animation: appearance 1000ms both;
+}
+
+.submenuItems--1 {
+  animation-delay: 111.11111ms;
+}
+
+.submenuItems--2 {
+  animation-delay: 222.22222ms;
+}
+
+.submenuItems--3 {
+  animation-delay: 333.33333ms;
+}
+
+.submenuItems--4 {
+  animation-delay: 444.44444ms;
+}
+
+.submenuItems--5 {
+  animation-delay: 555.55556ms;
+}
+
+.submenuItems--6 {
+  animation-delay: 666.66667ms;
+}
+
+.submenuItems--7 {
+  animation-delay: 777.77778ms;
+}
+
+.submenuItems--8 {
+  animation-delay: 888.88889ms;
+}
+
+.submenuItems--9 {
+  animation-delay: 1000ms;
+}
+
+@media screen and (max-width: 415px) {
+  .submenuItems {
+    min-width: 91%;
+  }
+}
+
+@media screen and (min-width: 416px) and (max-width: 1024px) {
+  .submenuItems {
+    min-width: 95%;
+  }
 }
 
 .submenuItems__item {
@@ -455,37 +564,36 @@ body {
 
 .submenuItems__title {
   margin-bottom: 0;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .submenuItems__subtitle {
   margin-top: 0.4em;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .submenuItems__price {
   font-weight: bold;
   display: flex;
-  justify-self: end;
+  justify-items: flex-end;
   align-self: flex-end;
   padding: 0 1.5rem;
+  margin-bottom: -0.2em;
 }
 
 .submenuItems__confirmation {
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
+  justify-content: center;
+  transition-duration: 0.5s;
   background-color: #99e2d0;
   height: 73px;
-  width: 4em;
-  margin: -1rem -5rem -1rem 1rem;
-  transition-duration: 0.5s;
 }
 
 .submenuItems:hover .submenuItems__confirmation {
@@ -502,8 +610,8 @@ body {
   border-radius: 50%;
   background-color: white;
   color: #99e2d0;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transform: rotate(-360deg);
+  transition-duration: 0.6s;
 }
 
 .submenuItems:hover .submenuItems__wrapIcon {
@@ -514,7 +622,28 @@ body {
   font-size: 0.9em;
 }
 
-.submenu__items:hover + .item__confirmation {
-  transform: scale(1);
+.order {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 1.5em 0 2.5em 0;
+}
+
+.order__btn {
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 1.5em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  width: 150px;
+}
+
+.order__btn:hover {
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 /*# sourceMappingURL=style.css.map */

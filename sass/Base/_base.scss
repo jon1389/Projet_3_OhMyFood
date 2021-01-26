@@ -7,21 +7,14 @@ body{
     @include padding;
 }
 
-.operation, .restaurant{
+.operation, .restaurant, .menu, .menu__img, .order, .footer__container{
     max-width: 1500px;
     margin: auto;
 }
 
-
 .submenus{
     display: flex;
     column-gap: 3em;
+    justify-content: center;
 }
 
-@media screen and (max-width :1395px){
-.submenus{
-    display: flex;
-    flex-direction: column;
-}
-
-}
