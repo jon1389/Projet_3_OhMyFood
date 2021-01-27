@@ -3,22 +3,25 @@
     background-color: transparent;
     cursor: pointer;
     &__icon{
-        font-size: 2em; 
+        font-size: 1.8em; 
         &--menu{
             padding-top: 0.8em;   
         }
+
     }
     &__unlike{
         position: relative;
         background-color:none;
-        left: 34px;
+        left: 33px;
         z-index: 2;
+        opacity: 1;
         &:hover + .likeButton__like{
             background-image: -webkit-linear-gradient($colour-primary, $colour-secondary);
             -webkit-background-clip : text;
             -webkit-text-fill-color : transparent;
             opacity: 1;
         }
+
     }
     &__like{
         display: flex;
@@ -26,8 +29,8 @@
         justify-content:center;
         position: relative;
         color: transparent;
-        font-size: 1.9em;
-        width: 2.1rem;    
+        font-size: 1.7em;
+        width: 2rem;    
         border: none;
         opacity:0;
         transition: opacity 1s;

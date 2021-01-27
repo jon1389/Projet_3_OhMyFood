@@ -8,3 +8,28 @@
         opacity: 1;
     }
 }
+
+@keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+  } 
+
+@keyframes jump {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    25%{
+        transform: translatey(2em) scale(0.9, 1.1);
+    }
+    50%{
+        transform: translateY(4em) scale(1.2, 0.8);
+    }
+    75%{
+        transform: translateY(2em) scale(0.9, 1.1);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}

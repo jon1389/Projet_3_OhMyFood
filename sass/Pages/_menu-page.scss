@@ -171,7 +171,8 @@
         width: 250px;
         @media screen and (max-width: 415px){
             width: 150px;
-            padding: 1.5em 0 2.5em 0;
+            font-size: 1em;
+            padding: 1em 0 1em 0;
         }
     }
 }

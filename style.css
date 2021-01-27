@@ -59,6 +59,31 @@ body {
   }
 }
 
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translatey(2em) scale(0.9, 1.1);
+  }
+  50% {
+    transform: translateY(4em) scale(1.2, 0.8);
+  }
+  75% {
+    transform: translateY(2em) scale(0.9, 1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
 .likeButton {
   border: none;
   background-color: transparent;
@@ -66,7 +91,7 @@ body {
 }
 
 .likeButton__icon {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .likeButton__icon--menu {
@@ -76,8 +101,9 @@ body {
 .likeButton__unlike {
   position: relative;
   background-color: none;
-  left: 34px;
+  left: 33px;
   z-index: 2;
+  opacity: 1;
 }
 
 .likeButton__unlike:hover + .likeButton__like {
@@ -93,8 +119,8 @@ body {
   justify-content: center;
   position: relative;
   color: transparent;
-  font-size: 1.9em;
-  width: 2.1rem;
+  font-size: 1.7em;
+  width: 2rem;
   border: none;
   opacity: 0;
   transition: opacity 1s;
@@ -250,6 +276,50 @@ body {
   max-width: 60px;
   max-height: 20px;
   align-self: center;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader 0.01s;
+  animation-delay: 2000ms;
+  animation-fill-mode: both;
+}
+
+.loader__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__icon {
+  height: 100px;
+  width: 100px;
+  animation: jump 800ms both infinite ease-in-out;
+  animation-timing-function: cubic-bezier(0.59, 0.6, 0.41, 0.4);
+  background-image: transparent;
+}
+
+.loader__icon--1 {
+  animation-delay: 266.66667ms;
+}
+
+.loader__icon--2 {
+  animation-delay: 533.33333ms;
+}
+
+.loader__icon--3 {
+  animation-delay: 800ms;
 }
 
 .header {
@@ -656,7 +726,8 @@ body {
 @media screen and (max-width: 415px) {
   .order__btn {
     width: 150px;
-    padding: 1.5em 0 2.5em 0;
+    font-size: 1em;
+    padding: 1em 0 1em 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
