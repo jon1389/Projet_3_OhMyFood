@@ -8,12 +8,40 @@ body{
     font-family: 'Shrikhand', cursive, sans-serif;
 }
 
-.footer{
+.location{
+    &__input{
+        font-weight: bold;
+    }
+}
+
+.explore{
     &__title{
-        font-family: 'Shrikhand', cursive, sans-serif;
-        font-size: 1.1em;
-        font-weight: lighter;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+}
+
+.operation{
+    &__number{
         color: white;
+        font-size: 0.8em;
+    }
+    &__icon{
+        color: grey;
+        font-size: 1.5em;
+    }
+    &__text{
+        color: black;
+        font-weight: bold;
+    }
+}
+
+.likeButton{
+    &__icon{
+        font-size: 1.8em; 
+    }
+    &__like{
+        font-size: 1.7em;
     }
 }
 
@@ -22,7 +50,6 @@ body{
         font-family: "Shrikhand", "cursive";
         margin-bottom: 0;
         font-size: 2em;
-
     }
 }
 
@@ -32,5 +59,17 @@ body{
     }
     &__subtitle{
         font-size: 1em;
+    }
+    &__icon{
+        font-size: 0.9em;
+    }
+}
+
+.footer{
+    &__title{
+        font-family: 'Shrikhand', cursive, sans-serif;
+        font-size: 1.1em;
+        font-weight: lighter;
+        color: white;
     }
 }

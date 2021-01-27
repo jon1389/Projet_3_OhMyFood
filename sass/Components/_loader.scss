@@ -22,7 +22,7 @@
     &__icon{
         height: 100px;
         width: 100px;
-        animation: jump $loader-duration both infinite ease-in-out;
+        animation: bounce $loader-duration both infinite ease-in-out;
         animation-timing-function: cubic-bezier(.59,.6,.41,.4);
         background-image: transparent;
         @for $i from 1 through $num-icons{

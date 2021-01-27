@@ -4,6 +4,9 @@
     @include padding;
     &__part{
         display: flex;
+        @media screen and (max-width: 800px){
+            flex-direction: column;
+        }
     }
     &__link{
         @include link-btn;
@@ -13,6 +16,10 @@
         text-decoration: none;
         max-width: 100%;
         transition-duration: 0.5s;
+        @media screen and (max-width: 800px){
+            width: auto;
+            margin: 1em 0.5em;
+        }
         &:hover{
             background-color: #f0e6fc;
             .operation__icon{
@@ -32,30 +39,8 @@
         position: relative;
         left: -30px;
     }
-    &__number{
-        color: white;
-        font-size: 0.8em;
-    }
     &__icon{
-        color: grey;
-        font-size: 1.5em;
         max-width: 0.2em;
         margin-right: 2em;
-    }
-    &__text{
-        color: black;
-        font-weight: bold;
-    }
-}
-
-@media screen and (max-width: 800px){
-    .operation{
-        &__part{
-            flex-direction: column;
-        }
-        &__link{
-            width: auto;
-            margin: 1em 0.5em;
-        }
     }
 }

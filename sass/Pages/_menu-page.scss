@@ -31,7 +31,6 @@
     }
 }
 
-
 .submenus{
     padding: 0 0;
     padding-left: 1em;    
@@ -121,9 +120,7 @@
         justify-items: flex-end;
         align-self: flex-end;
         padding: 0 1.5rem;
-        margin-bottom: -0.2em;
-
-        
+        margin-bottom: -0.2em;  
     }
     &__confirmation{
         margin: -1rem -5rem -1rem 1rem;
@@ -138,7 +135,6 @@
     &:hover &__confirmation {
         margin-right: 0;
     }
-
     &__wrapIcon{
         display: flex;
         justify-content: center;
@@ -154,9 +150,6 @@
     }
     &:hover &__wrapIcon{
         transform: rotate(0);
-    }
-    &__icon{
-        font-size: 0.9em;
     }
 }
 

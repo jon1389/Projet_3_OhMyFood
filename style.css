@@ -13,12 +13,6 @@ body {
   margin: auto;
 }
 
-.submenus {
-  display: flex;
-  column-gap: 3em;
-  justify-content: center;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -27,11 +21,36 @@ body {
   font-family: 'Shrikhand', cursive, sans-serif;
 }
 
-.footer__title {
-  font-family: 'Shrikhand', cursive, sans-serif;
-  font-size: 1.1em;
-  font-weight: lighter;
+.location__input {
+  font-weight: bold;
+}
+
+.explore__title {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.operation__number {
   color: white;
+  font-size: 0.8em;
+}
+
+.operation__icon {
+  color: grey;
+  font-size: 1.5em;
+}
+
+.operation__text {
+  color: black;
+  font-weight: bold;
+}
+
+.likeButton__icon {
+  font-size: 1.8em;
+}
+
+.likeButton__like {
+  font-size: 1.7em;
 }
 
 .menu__title {
@@ -46,6 +65,17 @@ body {
 
 .submenuItems__subtitle {
   font-size: 1em;
+}
+
+.submenuItems__icon {
+  font-size: 0.9em;
+}
+
+.footer__title {
+  font-family: 'Shrikhand', cursive, sans-serif;
+  font-size: 1.1em;
+  font-weight: lighter;
+  color: white;
 }
 
 @keyframes appearance {
@@ -66,21 +96,26 @@ body {
   }
 }
 
-@keyframes jump {
+@keyframes bounce {
   0% {
     transform: translateY(0) scale(1);
+    opacity: 0.7;
   }
   25% {
     transform: translatey(2em) scale(0.9, 1.1);
+    opacity: 0.9;
   }
   50% {
-    transform: translateY(4em) scale(1.2, 0.8);
+    transform: translateY(4.5em) scale(1.2, 0.8);
+    opacity: 1;
   }
   75% {
     transform: translateY(2em) scale(0.9, 1.1);
+    opacity: 0.9;
   }
   100% {
     transform: translateY(0) scale(1);
+    opacity: 0.7;
   }
 }
 
@@ -88,10 +123,6 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-.likeButton__icon {
-  font-size: 1.8em;
 }
 
 .likeButton__icon--menu {
@@ -119,7 +150,6 @@ body {
   justify-content: center;
   position: relative;
   color: transparent;
-  font-size: 1.7em;
   width: 2rem;
   border: none;
   opacity: 0;
@@ -143,7 +173,6 @@ body {
 
 .location__input {
   background-color: #eceaea;
-  font-weight: bold;
   border: 0;
   width: 135px;
 }
@@ -159,8 +188,6 @@ body {
 }
 
 .explore__title {
-  font-size: 1.5em;
-  font-weight: 900;
   margin: 0;
 }
 
@@ -197,6 +224,12 @@ body {
   display: flex;
 }
 
+@media screen and (max-width: 800px) {
+  .operation__part {
+    flex-direction: column;
+  }
+}
+
 .operation__link {
   border: 0;
   background-color: #f2f2f2;
@@ -212,6 +245,13 @@ body {
   text-decoration: none;
   max-width: 100%;
   transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+  .operation__link {
+    width: auto;
+    margin: 1em 0.5em;
+  }
 }
 
 .operation__link:hover {
@@ -235,31 +275,9 @@ body {
   left: -30px;
 }
 
-.operation__number {
-  color: white;
-  font-size: 0.8em;
-}
-
 .operation__icon {
-  color: grey;
-  font-size: 1.5em;
   max-width: 0.2em;
   margin-right: 2em;
-}
-
-.operation__text {
-  color: black;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 800px) {
-  .operation__part {
-    flex-direction: column;
-  }
-  .operation__link {
-    width: auto;
-    margin: 1em 0.5em;
-  }
 }
 
 .card__new {
@@ -305,21 +323,21 @@ body {
 .loader__icon {
   height: 100px;
   width: 100px;
-  animation: jump 800ms both infinite ease-in-out;
+  animation: bounce 750ms both infinite ease-in-out;
   animation-timing-function: cubic-bezier(0.59, 0.6, 0.41, 0.4);
   background-image: transparent;
 }
 
 .loader__icon--1 {
-  animation-delay: 266.66667ms;
+  animation-delay: 250ms;
 }
 
 .loader__icon--2 {
-  animation-delay: 533.33333ms;
+  animation-delay: 500ms;
 }
 
 .loader__icon--3 {
-  animation-delay: 800ms;
+  animation-delay: 750ms;
 }
 
 .header {
@@ -334,6 +352,13 @@ body {
   padding: 1em 1em;
 }
 
+@media screen and (max-width: 739px) {
+  .header__logo {
+    max-width: 9em;
+    padding-bottom: 0.5em;
+  }
+}
+
 .return {
   display: flex;
   text-decoration: none;
@@ -345,13 +370,6 @@ body {
   color: black;
   align-self: center;
   justify-self: center;
-}
-
-@media screen and (max-width: 739px) {
-  .header__logo {
-    max-width: 9em;
-    padding-bottom: 0.5em;
-  }
 }
 
 .restaurant {
@@ -691,10 +709,6 @@ body {
 
 .submenuItems:hover .submenuItems__wrapIcon {
   transform: rotate(0);
-}
-
-.submenuItems__icon {
-  font-size: 0.9em;
 }
 
 .order {
