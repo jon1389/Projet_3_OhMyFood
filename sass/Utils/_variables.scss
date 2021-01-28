@@ -10,3 +10,5 @@ $anim-delay: $anim-duration / $num-items;
 $num-icons:3;
 $loader-duration: 750ms;
 $loader-delay: $loader-duration / $num-icons;
+$backgroundGradient: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
+$backgroundGradient--light: linear-gradient(to bottom right, lighten($colour-secondary,5), lighten($colour-primary,5));

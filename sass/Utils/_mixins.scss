@@ -11,8 +11,8 @@
 }
 
 @mixin btn {
-    @include gradient();
     @include shadow();
+    background: $backgroundGradient;
     padding: 1em 1.5em;    
     border: none;
     border-radius: 1.5em;
@@ -22,7 +22,7 @@
     transition-duration: 0.4s;
     &:hover {
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
-        background-image: linear-gradient(to bottom right, lighten($colour-secondary,5), lighten($colour-primary,5));
+        background: $backgroundGradient--light;
     }
 }
 

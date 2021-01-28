@@ -2,16 +2,13 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    &__icon{
-        &--menu{
-            padding-top: 0.8em;   
-        }
-
-    }
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     &__unlike{
-        position: relative;
+        position: absolute;
         background-color:none;
-        left: 33px;
         z-index: 2;
         opacity: 1;
         &:hover + .likeButton__like{
@@ -19,16 +16,16 @@
             -webkit-background-clip : text;
             -webkit-text-fill-color : transparent;
             opacity: 1;
+            transition: opacity 1s;
         }
-
+        &:hover{
+            opacity: 0;
+            transition: opacity 1s;
+        }        
     }
     &__like{
         display: flex;
-        align-items:center;
-        justify-content:center;
-        position: relative;
         color: transparent;
-        width: 2rem;    
         border: none;
         opacity:0;
         transition: opacity 1s;

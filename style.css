@@ -49,10 +49,6 @@ body {
   font-size: 1.8em;
 }
 
-.likeButton__like {
-  font-size: 1.7em;
-}
-
 .menu__title {
   font-family: "Shrikhand", "cursive";
   margin-bottom: 0;
@@ -91,7 +87,7 @@ body {
 
 @keyframes loader {
   100% {
-    opacity: 0;
+    visibility: hidden;
     z-index: -10;
   }
 }
@@ -119,20 +115,25 @@ body {
   }
 }
 
+@keyframes heart {
+  0% {
+    opacity: 1;
+  }
+}
+
 .likeButton {
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-.likeButton__icon--menu {
-  padding-top: 0.8em;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .likeButton__unlike {
-  position: relative;
+  position: absolute;
   background-color: none;
-  left: 33px;
   z-index: 2;
   opacity: 1;
 }
@@ -142,15 +143,17 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
+  transition: opacity 1s;
+}
+
+.likeButton__unlike:hover {
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .likeButton__like {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   color: transparent;
-  width: 2rem;
   border: none;
   opacity: 0;
   transition: opacity 1s;
@@ -198,8 +201,8 @@ body {
 
 .explore__btn {
   margin: 1em 1em;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 1em 1.5em;
   border: none;
   border-radius: 1.5em;
@@ -211,7 +214,7 @@ body {
 
 .explore__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
 .operation {
@@ -302,7 +305,7 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
   z-index: 50;
   display: flex;
   align-items: center;
@@ -373,11 +376,20 @@ body {
 }
 
 .restaurant {
-  padding: 2em 1em;
+  padding: 2em 3em;
+  margin: 1em auto;
+  border-radius: 20px;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 739px) {
+  .restaurant {
+    padding: 2em 1em;
+    margin: 0;
+  }
 }
 
 .restaurant__title {
@@ -389,7 +401,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-column-gap: 1em;
+  grid-column-gap: 2em;
   grid-row-gap: 1em;
   width: 100%;
 }
@@ -445,7 +457,7 @@ body {
 .card__FigureCaption {
   max-height: 5em;
   padding: 0 1em;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
   grid-column-start: 1;
@@ -472,10 +484,29 @@ body {
   text-decoration: none;
 }
 
-.footer__nav {
+.footer__title {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 2em 0;
+}
+
+@media screen and (max-width: 739px) {
+  .footer__title {
+    justify-content: flex-start;
+    margin-bottom: 1em;
+  }
+}
+
+.footer__nav {
+  display: inline-block;
+  justify-items: space-around;
   margin-bottom: 1em;
+}
+
+@media screen and (max-width: 739px) {
+  .footer__nav {
+    flex-direction: column;
+  }
 }
 
 .footer__link {
@@ -486,6 +517,11 @@ body {
 
 .footer__link:hover {
   color: #9356dc;
+  transition: color 0.5s;
+}
+
+.footer__text {
+  margin-left: 0.2em;
 }
 
 .menu__img {
@@ -526,7 +562,7 @@ body {
 }
 
 .menu__likeButton {
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 .submenus {
@@ -719,8 +755,8 @@ body {
 }
 
 .order__btn {
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 1em 1.5em;
   border: none;
   border-radius: 1.5em;
@@ -734,7 +770,7 @@ body {
 
 .order__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
 @media screen and (max-width: 415px) {

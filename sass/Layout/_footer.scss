@@ -4,12 +4,23 @@
         display: flex;
         flex-direction: column;
         text-decoration: none;
-
+    }
+    &__title{
+        display: flex;
+        justify-content: center;
+        margin: 0 0 2em 0;
+        @media screen and (max-width: 739px){
+            justify-content: flex-start;
+            margin-bottom: 1em;
+        }
     }
     &__nav{
-        display: flex;
-        flex-direction: column;
+        display: inline-block;
+        justify-items: space-around;
         margin-bottom: 1em;
+        @media screen and (max-width: 739px){
+            flex-direction: column;
+        }
     }
     &__link{
         text-decoration: none;
@@ -17,6 +28,10 @@
         margin-bottom: 0.5em;
         &:hover{
             color: $colour-primary;
+            transition: color 0.5s;
         }
+    }
+    &__text{
+        margin-left: 0.2em;
     }
 }
