@@ -1,51 +1,54 @@
 .menu__img{
-    max-height: 32rem;
-    max-width: 100%;
-    width: 100%;
+    max-height: $imgMaxHeight;
+    height: auto;
+    max-width: $width-default;
+    width: $width-default;
     z-index: -1;
     object-fit: cover;
-    @media screen and (max-width: 415px){
-        height: 15rem;
+    @media screen and (min-width: 510px){
         }
-    @media screen and (min-width: 416px) and (max-width: 1024px){
-        max-height: 20rem;
+    @media screen and (min-width: 1024px){
+        max-height: $imgMaxHeight+17;
     }
 }
 
 .menu{
     background-color: $grey-clear;
     z-index: 2;
+    @media screen and (min-width: 1024px){
+        margin: $menuMargin;
+        border-bottom-left-radius: $menuBottomRadius;
+        border-bottom-right-radius: $menuBottomRadius;
+    }
     &__header{
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: $grey-clear;
-        @include padding;
-        margin-top: -4em;
-        margin-bottom: 1.5em;
-        border-radius: 2em 2em 0 0;
+        padding: $headPadding;
+        margin: $headMargin;
+        border-radius: $headTopRadius;
+    }
+    &__title{
+        margin: $margin-default;
     }
     &__likeButton{
-        margin-right: 3%;
+        margin-right: $likeBtnMarginRight;
     }
 }
 
 .submenus{
-    padding: 0 0;
-    padding-left: 1em;    
+    padding: $padding-default;
+    padding-left: $submenusPaddingLeft;    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 1em;
-    @media screen and (max-width: 415px){
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr ;
-        row-gap: 1.5em;
-    }
-    @media screen and (min-width: 416px) and (max-width: 1024px){
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        row-gap: 1.5em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    row-gap: $submenusRowGap;
+    @media only screen and (min-width: 1024px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: $submenusColGap;
     }
 }
 
@@ -54,32 +57,31 @@
     &__title {
         text-transform: uppercase;
         position: relative;
-        padding-bottom: 0.5rem;
-        margin-top: 0;
+        padding-bottom: $submenuTitlePaddingBottom;
+        margin-top: $submenuTitleMarginTop;
         font-weight: normal;
         &::after {
             content: "";
-            width: 3rem;
-            height: 0.25rem;
-            background-color: $colour-tertiary;
+            width: $UndertitlebarWidth;
+            height: $UndertitlebarHeight;
+            background-color: $Undertitlebarcolor;
             position: absolute;
-            left: 0;
-            bottom: 0;
+            left: $UndertitlebarleftPos;
+            bottom: $UndertitlebarbottomPos;
         }
     }
 }
 
 .submenuItems{
-    max-width: 90%;
+    max-width: $itemsMaxWidth;
     @include link-btn;
-    height: 2em;
+    height: $itemsHeight;
     display: flex;
     align-items: center;
     background-color: white;
     cursor: pointer;
-    padding: 16px 0;
-    padding-left: 16px;
-    margin: 1.5em 0;
+    padding: $itemsPadding;
+    margin: $itemsMargin;
     overflow: hidden;
     white-space: nowrap;
     animation: appearance $anim-duration both;
@@ -88,49 +90,39 @@
             animation-delay: $anim-delay * $i;
         }
     }
-    @media screen and (max-width: 415px){
-        min-width: 91%;
-        margin: 1em 0;
-    }
-    @media screen and (min-width: 416px) and (max-width: 1024px){
-        min-width: 95%;
-        margin: 1em 0;
+    @media screen and (min-width: 1024px){
+        max-width: $itemsMaxWidth-screen;
+        margin: $itemsMarginScreen;
     }
     &__item{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        @include text-hidden;
         flex: 1;
     }
     &__title{
-        margin: 0.8em 0 0 0;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        margin: $itemsTitleMargin;
+        @include text-hidden;
     }
     &__subtitle{
-        margin-top: 0.4em;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        margin-top: $itemsSubtitleMargintop;
+        @include text-hidden;
     }
     &__price {
         font-weight: bold;
         display: flex;
         justify-items: flex-end;
         align-self: flex-end;
-        padding: 0 1.5rem;
-        margin-bottom: -0.2em;  
+        padding: $itemsPricePadding;
+        margin-bottom: $itemsPriceMarginBottom;  
     }
     &__confirmation{
-        margin: -1rem -5rem -1rem 1rem;
-        width: 4rem;
+        margin: $confirmationMargin;
+        width: $confirmationWidth;
         display:flex;
         align-items:center;
         justify-content:center;
-        transition-duration: 0.5s;
-        background-color: $colour-tertiary;
-        height: 73px;
+        transition-duration: $trans-duration;
+        background-color: $confirmationBackColor;
+        height: $confirmationHeight;
     }
     &:hover &__confirmation {
         margin-right: 0;
@@ -140,13 +132,13 @@
         justify-content: center;
         align-items: center;
         border: 1px white solid;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background-color: white;
-        color: $colour-tertiary;
+        height: $wrapiconHeight;
+        width: $wrapiconWidth;
+        border-radius: $wrapiconRadius;
+        background-color: $background-color--default;
+        color: $wrapiconColor;
         transform: rotate(-360deg);
-        transition-duration: 0.6s;
+        transition-duration: $trans-duration;
     }
     &:hover &__wrapIcon{
         transform: rotate(0);
@@ -154,18 +146,20 @@
 }
 
 .order{
-    background-color: $grey-clear;
+    background-color: $orderBackColor;
     display: flex;
     justify-content: center;
-    padding: 2.5em 0 3em 0;
+    padding: $orderPadding;
+    border-bottom-left-radius: $menuBottomRadius;
+    border-bottom-right-radius: $menuBottomRadius;
+
     &__btn{
         @include btn;
-        font-size: 1.2em;
-        width: 250px;
-        @media screen and (max-width: 415px){
-            width: 150px;
-            font-size: 1em;
-            padding: 1em 0 1em 0;
+        font-size: $font-size;
+        width: 150px;
+        @media screen and (min-width: 510px){
+            width: $orderBtnWidth;
+            font-size: $font-size*1.2
         }
     }
 }

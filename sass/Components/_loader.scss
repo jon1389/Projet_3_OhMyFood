@@ -10,18 +10,15 @@
     align-items:center;
     justify-content:center;
     animation: loader 0.01s;
-    animation-delay: 2000ms;
+    animation-delay: $anim-duration*2;
     animation-fill-mode: both;
-    &__container{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items:center;
-        justify-content:center;    
-    }
     &__icon{
-        height: 100px;
-        width: 100px;
+        height: $loaderHeight;
+        width: $loaderHeight;
+        @media only screen and (min-width: 510px){
+            height: $loaderHeight+20px;
+            width: $loaderHeight+20px; 
+        }
         animation: bounce $loader-duration both infinite ease-in-out;
         animation-timing-function: cubic-bezier(.59,.6,.41,.4);
         background-image: transparent;

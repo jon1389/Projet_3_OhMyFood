@@ -50,3 +50,9 @@
     font-size: 0.9em;
     font-weight: bold;
 }
+
+@mixin text-hidden {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;    
+}

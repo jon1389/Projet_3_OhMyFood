@@ -1,14 +1,123 @@
+//coulours
 $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
+$darken-grey:grey;
 $dark-grey:#dfdfdf;
 $grey:#eceaea;
 $grey-clear:#f2f2f2;
+$clear-purple: #f0e6fc;
+$text-color--default:black;
+$background-color--default:white;
+
+//animations
 $num-items:9;
 $anim-duration: 1000ms;
 $anim-delay: $anim-duration / $num-items;
 $num-icons:3;
 $loader-duration: 750ms;
 $loader-delay: $loader-duration / $num-icons;
+$trans-duration: 500ms;
+
+//background
 $backgroundGradient: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
 $backgroundGradient--light: linear-gradient(to bottom right, lighten($colour-secondary,5), lighten($colour-primary,5));
+
+//blocks
+$block-width: 1500px;
+$margin-default: 0em;
+$padding-default: 0em;
+$width-default:100%;
+
+//font size
+$font-size: 1em;
+
+//loader
+$loaderHeight: 80px;
+
+//header
+$gridTempCol: 70px 2fr 70px;
+$logoWidth: 10em;
+$arrowPadding: 0 1em;
+
+//explore
+$explorePadding: 2em 3em;
+$btnMargin: 1em 1em;
+
+//operation
+$circleWidth: 8px;
+$circleHeight: 8px;
+$circlePadding: 0.5em;
+$circleBRadius: 50%;
+$circleLeftPos: -30px;
+$iconWidth: 0em;
+$iconMarginRight: 2em;
+
+//restaurant
+$restaurant-padding: 2em 1em;
+$restaurant-margin: 1em auto;
+$borderRadius: 1em;
+$cardHeight: 16em;
+$cardMarginBottom: 1em;
+$imgHeight: 11em;
+$figCapHeight: 5em;
+$figCapPadding: 0em 1em;
+$figCapMarginTop: 0.5em;
+$figCapMarginBottom: 0em;
+
+//footer
+$footerBackground: rgb(40,40,40);
+$footerHeight: 135px;
+$titleMargin: 0 0 1em 0;
+$navGridTempCol: 1fr 1fr 1fr 1fr;
+$navMarginBottom: 2em;
+$linkMarginBottom: 0.5em;
+$textMarginLeft: 0.2em;
+
+//menu
+$imgMaxHeight: 15em;
+$headPadding: 2em 1em 1em 1em;
+$headMargin: -4em 0em 1.5em 0em; 
+$headTopRadius: 2em 2em 0em 0em;
+$menuMargin: 0 auto 2em auto;
+$menuBottomRadius: 2em;
+
+$likeBtnMarginRight: 3%;
+
+$submenusPaddingLeft: 1em;
+$submenusRowGap: 1.5em;
+$submenusColGap: 1em;
+
+$submenuTitlePaddingBottom: 0.5em;
+$submenuTitleMarginTop: 0;
+$UndertitlebarWidth: 2.5em;
+$UndertitlebarHeight: 0.25em;
+$Undertitlebarcolor: $colour-tertiary;
+$UndertitlebarleftPos: 0;
+$UndertitlebarbottomPos: 0;
+
+$itemsMaxWidth:95%;
+$itemsHeight: 2em;
+$itemsPadding: 16px 0 16px 16px;
+$itemsMargin: 1.5em 0em;
+$itemsMaxWidth-screen: 92%;
+$itemsMarginScreen: 1em 0;
+$itemsTitleMargin: 0.8em 0 0 0;
+$itemsSubtitleMargintop: 0.4em;
+$itemsPricePadding: 0 1.5em;
+$itemsPriceMarginBottom: -0.2em;
+
+$confirmationMargin:-1rem -5rem -1rem 1rem;
+$confirmationWidth: 3.8em;
+$confirmationBackColor: $colour-tertiary;
+$confirmationHeight: 73px;
+
+$wrapiconHeight:20px;
+$wrapiconWidth:20px;
+$wrapiconRadius: 50%;
+$wrapiconColor: $colour-tertiary;
+
+$orderBackColor: $grey-clear;
+$orderPadding: 2.5em 0 3em 0;
+
+$orderBtnWidth: 250px;

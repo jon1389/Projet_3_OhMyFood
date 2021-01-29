@@ -1,6 +1,6 @@
 body{
-    margin: 0 0;
-    padding: 0 0;
+    margin: $margin-default;
+    padding: $padding-default;
 }
 
 .footer{
@@ -8,7 +8,7 @@ body{
 }
 
 .operation, .restaurant, .menu, .menu__img, .order, .footer__container{
-    max-width: 1500px;
+    max-width: $block-width;
     margin: auto;
 }
 

@@ -10,13 +10,14 @@ body{
 
 .location{
     &__input{
+        font-size: $font-size;
         font-weight: bold;
     }
 }
 
 .explore{
     &__title{
-        font-size: 1.5em;
+        font-size: $font-size*1.5;
         font-weight: 900;
     }
 }
@@ -24,11 +25,11 @@ body{
 .operation{
     &__number{
         color: white;
-        font-size: 0.8em;
+        font-size: $font-size*0.8;
     }
     &__icon{
         color: grey;
-        font-size: 1.5em;
+        font-size: $font-size*1.5;
     }
     &__text{
         color: black;
@@ -38,7 +39,7 @@ body{
 
 .likeButton{
     &__icon{
-        font-size: 1.8em; 
+        font-size: $font-size*1.8; 
     }
 }
 
@@ -46,26 +47,26 @@ body{
     &__title{
         font-family: "Shrikhand", "cursive";
         margin-bottom: 0;
-        font-size: 2em;
+        font-size: $font-size*2;
     }
 }
 
 .submenuItems{
     &__title{
-        font-size: 1.2em;
+        font-size: $font-size*1.2;
     }
     &__subtitle{
-        font-size: 1em;
+        font-size: $font-size;
     }
     &__icon{
-        font-size: 0.9em;
+        font-size: $font-size*0.9;
     }
 }
 
 .footer{
     &__title{
         font-family: 'Shrikhand', cursive, sans-serif;
-        font-size: 1.1em;
+        font-size: $font-size*1.1;
         font-weight: lighter;
         color: white;
     }

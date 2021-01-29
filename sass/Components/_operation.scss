@@ -4,24 +4,23 @@
     @include padding;
     &__part{
         display: flex;
-        @media screen and (max-width: 800px){
-            flex-direction: column;
+        flex-direction: column;
+        @media screen and (min-width: 800px){
+            flex-direction: row;
         }
     }
     &__link{
         @include link-btn;
-        margin: 1em 1.5em;
         display: flex;
         align-items: center;
         text-decoration: none;
-        max-width: 100%;
-        transition-duration: 0.5s;
-        @media screen and (max-width: 800px){
-            width: auto;
-            margin: 1em 0.5em;
+        width: auto;
+        transition-duration: $trans-duration;
+        @media screen and (min-width: 800px){
+            width: $width-default;
         }
         &:hover{
-            background-color: #f0e6fc;
+            background-color: $clear-purple;
             .operation__icon{
                 color: $colour-primary;
             }
@@ -30,17 +29,16 @@
     &__circle{
         display: flex;
         align-items: center;
-        border: 0;
-        width: 8px;
-        height: 8px;
-        padding: 0.5em;
-        border-radius: 50%;
+        width: $circleWidth;
+        height: $circleHeight;
+        padding: $circlePadding;
+        border-radius: $circleBRadius;
         background-color: $colour-primary;
         position: relative;
-        left: -30px;
+        left: $circleLeftPos;
     }
     &__icon{
-        max-width: 0.2em;
-        margin-right: 2em;
+        width: $iconWidth;
+        margin-right: $iconMarginRight;
     }
 }
