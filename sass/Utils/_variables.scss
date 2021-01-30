@@ -10,14 +10,12 @@ $clear-purple: #f0e6fc;
 $text-color--default:black;
 $background-color--default:white;
 
-//animations
-$num-items:9;
-$anim-duration: 1000ms;
-$anim-delay: $anim-duration / $num-items;
-$num-icons:3;
-$loader-duration: 750ms;
-$loader-delay: $loader-duration / $num-icons;
+//Link
 $trans-duration: 500ms;
+
+//Like button
+$likeTrans-duration: 1000ms;
+$iconPaddingRight: 0.5em;
 
 //background
 $backgroundGradient: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
@@ -34,6 +32,10 @@ $font-size: 1em;
 
 //loader
 $loaderHeight: 80px;
+$loaderBackground: #E8FEF9;
+$num-icons:3;
+$loader-duration: 750ms;
+$loader-delay: $loader-duration / $num-icons;
 
 //header
 $gridTempCol: 70px 2fr 70px;
@@ -67,17 +69,18 @@ $figCapMarginBottom: 0em;
 
 //footer
 $footerBackground: rgb(40,40,40);
-$footerHeight: 135px;
+$footerHeight: 160px;
 $titleMargin: 0 0 1em 0;
 $navGridTempCol: 1fr 1fr 1fr 1fr;
 $navMarginBottom: 2em;
 $linkMarginBottom: 0.5em;
+$linkMarginTop--screen: 1.5em;
 $textMarginLeft: 0.2em;
 
 //menu
 $imgMaxHeight: 15em;
 $headPadding: 2em 1em 1em 1em;
-$headMargin: -4em 0em 1.5em 0em; 
+$headMargin: -4em 0em 0em 0em; 
 $headTopRadius: 2em 2em 0em 0em;
 $menuMargin: 0 auto 2em auto;
 $menuBottomRadius: 2em;
@@ -89,13 +92,16 @@ $submenusRowGap: 1.5em;
 $submenusColGap: 1em;
 
 $submenuTitlePaddingBottom: 0.5em;
-$submenuTitleMarginTop: 0;
+$submenuTitleMarginTop: 1em;
 $UndertitlebarWidth: 2.5em;
 $UndertitlebarHeight: 0.25em;
 $Undertitlebarcolor: $colour-tertiary;
 $UndertitlebarleftPos: 0;
 $UndertitlebarbottomPos: 0;
 
+$num-items:9;
+$anim-duration: 1000ms;
+$anim-delay: $anim-duration / $num-items;
 $itemsMaxWidth:95%;
 $itemsHeight: 2em;
 $itemsPadding: 16px 0 16px 16px;

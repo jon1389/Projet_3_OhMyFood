@@ -1,5 +1,8 @@
 .footer{
     background: $footerBackground;
+    @media only screen and (min-width: 1024px){
+        height: $footerHeight;
+    }
     &__container{
         display: flex;
         flex-direction: column;
@@ -21,7 +24,6 @@
             grid-template-columns: $navGridTempCol;
             margin-bottom: $navMarginBottom;
             justify-items: center;
-
         }
     }
     &__link{
@@ -29,8 +31,13 @@
         color: white;
         margin-bottom: $linkMarginBottom;
         &:hover{
-            color: $colour-primary;
-            transition: color $trans-duration;
+            @include gradient;
+            -webkit-background-clip : text;
+            -webkit-text-fill-color : transparent;            
+            transition: background-image $trans-duration;
+        }
+        @media only screen and (min-width: 1024px){
+            margin-top: $linkMarginTop--screen;
         }
     }
     &__text{

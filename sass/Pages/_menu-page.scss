@@ -41,11 +41,9 @@
 .submenus{
     padding: $padding-default;
     padding-left: $submenusPaddingLeft;    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
     row-gap: $submenusRowGap;
     @media only screen and (min-width: 1024px){
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         column-gap: $submenusColGap;

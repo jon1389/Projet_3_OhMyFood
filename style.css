@@ -116,20 +116,8 @@ body {
   }
 }
 
-@keyframes heart {
-  0% {
-    opacity: 1;
-  }
-}
-
-.likeButton {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.likeButton__icon {
+  padding-right: 0.5em;
 }
 
 .likeButton__unlike {
@@ -137,27 +125,23 @@ body {
   background-color: none;
   z-index: 2;
   opacity: 1;
+  transition: opacity 1000ms;
 }
 
 .likeButton__unlike:hover + .likeButton__like {
-  background-image: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   opacity: 1;
-  transition: opacity 1s;
 }
 
 .likeButton__unlike:hover {
   opacity: 0;
-  transition: opacity 1s;
 }
 
 .likeButton__like {
-  display: flex;
-  color: transparent;
-  border: none;
+  background-image: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 1000ms;
 }
 
 .location {
@@ -304,12 +288,12 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  background: #E8FEF9;
   z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loader 0.01s;
+  animation: loader;
   animation-delay: 2000ms;
   animation-fill-mode: both;
 }
@@ -319,7 +303,6 @@ body {
   width: 80px;
   animation: bounce 750ms both infinite ease-in-out;
   animation-timing-function: cubic-bezier(0.59, 0.6, 0.41, 0.4);
-  background-image: transparent;
 }
 
 @media only screen and (min-width: 510px) {
@@ -477,6 +460,12 @@ body {
   background: #282828;
 }
 
+@media only screen and (min-width: 1024px) {
+  .footer {
+    height: 160px;
+  }
+}
+
 .footer__container {
   display: flex;
   flex-direction: column;
@@ -516,8 +505,16 @@ body {
 }
 
 .footer__link:hover {
-  color: #9356dc;
-  transition: color 500ms;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-image 500ms;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer__link {
+    margin-top: 1.5em;
+  }
 }
 
 .footer__text {
@@ -559,7 +556,7 @@ body {
   justify-content: space-between;
   background-color: #f2f2f2;
   padding: 2em 1em 1em 1em;
-  margin: -4em 0em 1.5em 0em;
+  margin: -4em 0em 0em 0em;
   border-radius: 2em 2em 0em 0em;
 }
 
@@ -574,14 +571,12 @@ body {
 .submenus {
   padding: 0em;
   padding-left: 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   row-gap: 1.5em;
 }
 
 @media only screen and (min-width: 1024px) {
   .submenus {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     column-gap: 1em;
@@ -596,7 +591,7 @@ body {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5em;
-  margin-top: 0;
+  margin-top: 1em;
   font-weight: normal;
 }
 
