@@ -4,7 +4,6 @@
     }
     &__unlike{
         position: absolute;
-        background-color:none;
         z-index: 2;
         opacity: 1;
         transition: opacity $likeTrans-duration;

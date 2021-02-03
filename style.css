@@ -122,7 +122,6 @@ body {
 
 .likeButton__unlike {
   position: absolute;
-  background-color: none;
   z-index: 2;
   opacity: 1;
   transition: opacity 1000ms;
@@ -719,9 +718,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px white solid;
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   border-radius: 50%;
   background-color: white;
   color: #99e2d0;
