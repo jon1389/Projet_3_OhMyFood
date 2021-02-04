@@ -28,13 +28,12 @@
     }
     &__link{
         text-decoration: none;
-        color: white;
         margin-bottom: $linkMarginBottom;
+        color: $background-color--default;
         &:hover{
             @include gradient;
             -webkit-background-clip : text;
             -webkit-text-fill-color : transparent;            
-            transition: background-image $trans-duration;
         }
         @media only screen and (min-width: 1024px){
             margin-top: $linkMarginTop--screen;

@@ -8,7 +8,7 @@ body {
   padding: 1em 1em;
 }
 
-.operation, .restaurant, .menu, .menu__img, .order, .footer__container {
+.operation, .restaurant, .restaurants, .menu, .menu__img, .order, .footer__container {
   max-width: 1500px;
   margin: auto;
 }
@@ -116,8 +116,15 @@ body {
   }
 }
 
+.likeButton {
+  border: none;
+  background-color: transparent;
+}
+
 .likeButton__icon {
   padding-right: 0.5em;
+  z-index: 20;
+  font-size: 2.5em;
 }
 
 .likeButton__unlike {
@@ -161,7 +168,7 @@ body {
 .location__input {
   background-color: #eceaea;
   border: 0;
-  width: 135px;
+  width: 140px;
 }
 
 .explore {
@@ -205,6 +212,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1em 1em;
+  margin-bottom: 3em;
 }
 
 .operation__part {
@@ -263,22 +271,6 @@ body {
 .operation__icon {
   width: 0em;
   margin-right: 2em;
-}
-
-.card__new {
-  padding: 5px 15px;
-  border-radius: 0.1em;
-  background-color: #99e2d0;
-  color: #149c7a;
-  font-size: 0.9em;
-  font-weight: bold;
-  display: grid;
-  grid-column-start: 4;
-  grid-row: 1;
-  z-index: 2;
-  max-width: 60px;
-  max-height: 20px;
-  align-self: center;
 }
 
 .loader {
@@ -354,7 +346,7 @@ body {
   justify-self: center;
 }
 
-.restaurant {
+.restaurants {
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
@@ -364,18 +356,18 @@ body {
 }
 
 @media screen and (min-width: 739px) {
-  .restaurant {
+  .restaurants {
     padding: 1em 3em 2em 3em;
-    margin: 1em auto;
+    margin: 3em auto;
     border-radius: 1.5em;
   }
 }
 
-.restaurant__title {
+.restaurants__title {
   align-self: start;
 }
 
-.restaurant__card {
+.restaurants__card {
   display: flex;
   flex-direction: column;
   border-radius: 1em;
@@ -383,7 +375,7 @@ body {
 }
 
 @media screen and (min-width: 739px) {
-  .restaurant__card {
+  .restaurants__card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -392,57 +384,81 @@ body {
   }
 }
 
-.card {
-  text-decoration: none;
+.restaurant {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 100px;
+  grid-template-rows: 0.5fr 1fr 0.7fr;
   color: black;
   background-color: white;
   border-radius: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   height: 16em;
+  width: 100%;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 739px) {
-  .card {
+  .restaurant {
     height: 18em;
   }
 }
 
-.card__figure {
-  margin: 0em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 100px;
-  grid-template-rows: 0.5fr 1fr 0.7fr;
+.restaurant__header {
+  text-decoration: none;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
-.card__img {
+.restaurant__img {
   object-fit: cover;
-  object-position: 50% 75%;
+  object-position: 50% 60%;
   width: 100%;
   height: 11em;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: span 2;
 }
 
 @media screen and (min-width: 739px) {
-  .card__img {
-    height: 13em;
+  .restaurant__img {
+    height: 12em;
     object-position: 50% 50%;
   }
 }
 
-.card__FigureCaption {
+.restaurant__new {
+  padding: 5px 15px;
+  border-radius: 0.1em;
+  background-color: #99e2d0;
+  color: #149c7a;
+  font-size: 0.9em;
+  font-weight: bold;
+  display: grid;
+  grid-column-start: 4;
+  grid-row: 1;
+  z-index: 2;
+  max-width: 60px;
+  max-height: 20px;
+  align-self: center;
+}
+
+.restaurant__subtitle {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 3;
   max-height: 5em;
   padding: 0em 1em;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-column-start: 1;
-  grid-column-end: 5;
+}
+
+.restaurant__like {
+  position: relative;
+  left: 20px;
+  grid-column-start: 4;
   grid-row: 3;
 }
 
@@ -455,6 +471,74 @@ body {
   margin-top: 0.5em;
 }
 
+/*
+.card{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 50px;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-decoration: none;
+    color: $text-color--default;
+    background-color: $background-color--default;
+    border-radius: $borderRadius;
+    margin-bottom: $cardMarginBottom;
+    height: $cardHeight;
+    width: 100%;
+    @include shadow;
+    @media screen and (min-width: 739px){
+        height: $cardHeight+2;
+    }
+    &__figure{
+        grid-column-start:1 ;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 100px;
+        grid-template-rows: 0.5fr 1fr 0.7fr;
+        margin: $margin-default;
+    }
+    &__img{
+        object-fit: cover;
+        object-position: 50% 75%;
+        width: $width-default;
+        height: $imgHeight;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+        @media screen and (min-width: 739px){
+            height: $imgHeight+2;
+            object-position: 50% 50%;
+        }
+    }
+    &__FigureCaption{
+        max-height: $figCapHeight;
+        padding: $figCapPadding;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row: 3;
+    }
+    &__like{
+        grid-column: 4;
+        grid-row: 3;
+    }
+}
+
+.FigureCaption{
+    &__title{
+        margin-top: $figCapMarginTop;
+        margin-bottom: $figCapMarginBottom;
+    }
+    &__subtitle{
+        margin-top: $figCapMarginTop;
+    }
+}
+*/
 .footer {
   background: #282828;
 }
@@ -499,15 +583,14 @@ body {
 
 .footer__link {
   text-decoration: none;
-  color: white;
   margin-bottom: 0.5em;
+  color: white;
 }
 
 .footer__link:hover {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background-image 500ms;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -564,7 +647,7 @@ body {
 }
 
 .menu__likeButton {
-  margin-right: 3%;
+  margin-right: 0;
 }
 
 .submenus {

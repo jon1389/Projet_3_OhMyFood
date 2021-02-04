@@ -1,6 +1,11 @@
 .likeButton{
+    border: none;
+    background-color: transparent;
+
     &__icon{
         padding-right: $iconPaddingRight;
+        z-index: 20;
+        font-size: $font-size+1.5;
     }
     &__unlike{
         position: absolute;

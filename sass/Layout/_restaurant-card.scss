@@ -1,4 +1,4 @@
-.restaurant{
+.restaurants{
     background-color: $grey-clear;
     display: flex;
     flex-direction: column;
@@ -27,22 +27,104 @@
         }
     }
 }
+
+.restaurant{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 100px;
+    grid-template-rows: 0.5fr 1fr 0.7fr;
+    color: $text-color--default;
+    background-color: $background-color--default;
+    border-radius: $borderRadius;
+    margin-bottom: $cardMarginBottom;
+    height: $cardHeight;
+    width: 100%;
+    @include shadow;
+    @media screen and (min-width: 739px){
+        height: $cardHeight+2;
+    }
+    &__header{
+        text-decoration: none;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    &__img{
+        object-fit: cover;
+        object-position: 50% 60%;
+        width: $width-default;
+        height: $imgHeight;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        @media screen and (min-width: 739px){
+            height: $imgHeight+1;
+            object-position: 50% 50%;
+        }
+    }
+    &__new{
+        @include insert-new;
+        display: grid;
+        grid-column-start: 4;
+        grid-row: 1;
+        z-index: 2;
+        max-width: 60px;
+        max-height: 20px;
+        align-self: center;
+    }
+    &__subtitle{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $text-color--default;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 3;
+        max-height: $figCapHeight;
+        padding: $figCapPadding;
+    }
+    &__like{
+        position: relative;
+        left: 20px;
+        grid-column-start: 4;
+        grid-row: 3;
+    }
+}
+
+.FigureCaption{
+    &__title{
+        margin-top: $figCapMarginTop;
+        margin-bottom: $figCapMarginBottom;
+    }
+    &__subtitle{
+        margin-top: $figCapMarginTop;
+    }
+}
+
+/*
 .card{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 50px;
+    grid-template-rows: 1fr 1fr 1fr;
     text-decoration: none;
     color: $text-color--default;
     background-color: $background-color--default;
     border-radius: $borderRadius;
     margin-bottom: $cardMarginBottom;
     height: $cardHeight;
+    width: 100%;
     @include shadow;
     @media screen and (min-width: 739px){
         height: $cardHeight+2;
     }
     &__figure{
-        margin: $margin-default;
+        grid-column-start:1 ;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: span 3;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 100px;
         grid-template-rows: 0.5fr 1fr 0.7fr;
+        margin: $margin-default;
     }
     &__img{
         object-fit: cover;
@@ -70,6 +152,10 @@
         grid-column-end: 5;
         grid-row: 3;
     }
+    &__like{
+        grid-column: 4;
+        grid-row: 3;
+    }
 }
 
 .FigureCaption{
@@ -81,3 +167,4 @@
         margin-top: $figCapMarginTop;
     }
 }
+*/

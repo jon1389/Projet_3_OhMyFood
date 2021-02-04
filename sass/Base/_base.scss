@@ -7,7 +7,7 @@ body{
     @include padding;
 }
 
-.operation, .restaurant, .menu, .menu__img, .order, .footer__container{
+.operation, .restaurant, .restaurants, .menu, .menu__img, .order, .footer__container{
     max-width: $block-width;
     margin: auto;
 }

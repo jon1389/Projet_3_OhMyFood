@@ -47,6 +47,7 @@ $explorePadding: 2em 3em;
 $btnMargin: 1em 1em;
 
 //operation
+$opsMarginBottom: 3em;
 $circleWidth: 8px;
 $circleHeight: 8px;
 $circlePadding: 0.5em;
@@ -57,10 +58,10 @@ $iconMarginRight: 2em;
 
 //restaurant
 $restaurant-padding: 2em 1em;
-$restaurant-margin: 1em auto;
+$restaurant-margin: 3em auto;
 $borderRadius: 1em;
 $cardHeight: 16em;
-$cardMarginBottom: 1em;
+$cardMarginBottom: 1.5em;
 $imgHeight: 11em;
 $figCapHeight: 5em;
 $figCapPadding: 0em 1em;
@@ -85,7 +86,7 @@ $headTopRadius: 2em 2em 0em 0em;
 $menuMargin: 0 auto 2em auto;
 $menuBottomRadius: 2em;
 
-$likeBtnMarginRight: 3%;
+$likeBtnMarginRight: 0;
 
 $submenusPaddingLeft: 1em;
 $submenusRowGap: 1.5em;
