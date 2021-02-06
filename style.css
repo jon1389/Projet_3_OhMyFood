@@ -688,7 +688,7 @@ body {
 }
 
 .submenuItems {
-  max-width: 95%;
+  max-width: 92%;
   border: 0;
   background-color: #f2f2f2;
   padding: 1em 1em;
@@ -697,7 +697,7 @@ body {
   margin: 10px 15px;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   width: 100%;
-  height: 2em;
+  height: 3em;
   display: flex;
   align-items: center;
   background-color: white;
@@ -778,19 +778,24 @@ body {
   display: flex;
   justify-items: flex-end;
   align-self: flex-end;
-  padding: 0 1.5em;
+  padding: 0 0.5em 0 1em;
   margin-bottom: -0.2em;
 }
 
 .submenuItems__confirmation {
-  margin: -1rem -5rem -1rem 1rem;
-  width: 3.8em;
+  margin: -1rem -4.5rem -1rem 1rem;
+  width: 5em;
   display: flex;
   align-items: center;
   justify-content: center;
   transition-duration: 500ms;
   background-color: #99e2d0;
-  height: 73px;
+  height: 80px;
+  border: none;
+}
+
+.submenuItems__icon {
+  font-size: 1.3em;
 }
 
 .submenuItems:hover .submenuItems__confirmation {
@@ -801,8 +806,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 22px;
-  width: 22px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   background-color: white;
   color: #99e2d0;

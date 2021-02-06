@@ -121,6 +121,10 @@
         transition-duration: $trans-duration;
         background-color: $confirmationBackColor;
         height: $confirmationHeight;
+        border: none;
+    }
+    &__icon{
+        font-size: $confirmationIconSize;
     }
     &:hover &__confirmation {
         margin-right: 0;

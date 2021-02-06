@@ -103,24 +103,25 @@ $UndertitlebarbottomPos: 0;
 $num-items:9;
 $anim-duration: 1000ms;
 $anim-delay: $anim-duration / $num-items;
-$itemsMaxWidth:95%;
-$itemsHeight: 2em;
+$itemsMaxWidth:92%;
+$itemsHeight: 3em;
 $itemsPadding: 16px 0 16px 16px;
 $itemsMargin: 1.5em 0em;
 $itemsMaxWidth-screen: 92%;
 $itemsMarginScreen: 1em 0;
 $itemsTitleMargin: 0.8em 0 0 0;
 $itemsSubtitleMargintop: 0.4em;
-$itemsPricePadding: 0 1.5em;
+$itemsPricePadding: 0 0.5em 0 1em;
 $itemsPriceMarginBottom: -0.2em;
 
-$confirmationMargin:-1rem -5rem -1rem 1rem;
-$confirmationWidth: 3.8em;
+$confirmationMargin:-1rem -4.5rem -1rem 1rem;
+$confirmationWidth: 5em;
 $confirmationBackColor: $colour-tertiary;
-$confirmationHeight: 73px;
+$confirmationHeight: 80px;
+$confirmationIconSize: 1.3em;
 
-$wrapiconHeight:22px;
-$wrapiconWidth:22px;
+$wrapiconHeight:25px;
+$wrapiconWidth:25px;
 $wrapiconRadius: 50%;
 $wrapiconColor: $colour-tertiary;
 
