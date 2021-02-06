@@ -121,7 +121,7 @@
         transition-duration: $trans-duration;
         background-color: $confirmationBackColor;
         height: $confirmationHeight;
-        border: none;
+        border: 1px $colour-tertiary solid;
     }
     &__icon{
         font-size: $confirmationIconSize;

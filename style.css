@@ -791,7 +791,7 @@ body {
   transition-duration: 500ms;
   background-color: #99e2d0;
   height: 80px;
-  border: none;
+  border: 1px #99e2d0 solid;
 }
 
 .submenuItems__icon {
