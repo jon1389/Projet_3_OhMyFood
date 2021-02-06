@@ -791,7 +791,17 @@ body {
   transition-duration: 500ms;
   background-color: #99e2d0;
   height: 80px;
-  border: 1px #99e2d0 solid;
+  border: none;
+}
+
+.submenuItems__confirmation:hover {
+  background-color: #71d7be;
+  transition-duration: 700ms;
+}
+
+.submenuItems__confirmation:hover .submenuItems__wrapIcon {
+  color: #71d7be;
+  transition-duration: 700ms;
 }
 
 .submenuItems__icon {

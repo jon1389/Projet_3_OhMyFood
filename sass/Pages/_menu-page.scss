@@ -76,7 +76,7 @@
     height: $itemsHeight;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: $background-color--default;
     cursor: pointer;
     padding: $itemsPadding;
     margin: $itemsMargin;
@@ -121,7 +121,15 @@
         transition-duration: $trans-duration;
         background-color: $confirmationBackColor;
         height: $confirmationHeight;
-        border: 1px $colour-tertiary solid;
+        border: none;
+        &:hover{
+            background-color: darken($color: $confirmationBackColor, $amount: 10%);
+            transition-duration: $confirmationTransition;
+        }
+        &:hover .submenuItems__wrapIcon{
+            color: darken($color: $wrapiconColor, $amount: 10%);
+            transition-duration: $confirmationTransition;
+        }
     }
     &__icon{
         font-size: $confirmationIconSize;
