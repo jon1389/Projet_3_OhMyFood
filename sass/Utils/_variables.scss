@@ -42,6 +42,16 @@ $gridTempCol: 70px 2fr 70px;
 $logoWidth: 10em;
 $arrowPadding: 0 1em;
 
+//location
+$locPadding: 1em 1em 1em 0;
+$locBoxShadow: inset 0 5px 5px -5px grey;
+$locBtnHeight: 1em;
+$locIconSize: 18px;
+$locIconHover: lighten($color: $text-color--default, $amount: 30%);
+$locIconPadding: 0 7px;
+$locInputWidth: 140px;
+
+
 //explore
 $explorePadding: 2em 3em;
 $btnMargin: 1em 1em;

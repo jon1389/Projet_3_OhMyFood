@@ -2,10 +2,12 @@
     display: grid;
     grid-template-columns: $gridTempCol;
     &__logo{
-        width: $logoWidth;
         grid-column: 2;
         justify-self: center;
         @include padding;
+    }
+    &__img{
+        width: $logoWidth;
         @media screen and (min-width: 739px){
             width: $logoWidth+4;
         }
