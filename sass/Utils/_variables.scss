@@ -26,6 +26,7 @@ $block-width: 1500px;
 $margin-default: 0em;
 $padding-default: 0em;
 $width-default:100%;
+$height-default:0;
 
 //font size
 $font-size: 1em;
@@ -73,10 +74,10 @@ $borderRadius: 1em;
 $cardHeight: 16em;
 $cardMarginBottom: 1.5em;
 $imgHeight: 11em;
-$figCapHeight: 5em;
-$figCapPadding: 0em 1em;
-$figCapMarginTop: 0.5em;
-$figCapMarginBottom: 0em;
+$restaurantLikeTop: 2em;
+$restaurantLikeLeft: 3em;
+$FigureCaptionMargin: 0.5em 0 0 0.5em;
+
 
 //footer
 $footerBackground: rgb(40,40,40);
