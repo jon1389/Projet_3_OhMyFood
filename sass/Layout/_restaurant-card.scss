@@ -40,16 +40,32 @@
     height: $cardHeight;
     width: 100%;
     @include shadow;
-    @media screen and (min-width: 739px){
-        height: $cardHeight+2;
+    &__card{
+        text-decoration: none;
+        grid-column: 1/5;
+        grid-row: 1/3;
     }
+    &__like{
+        position: relative;
+        top: 2em;
+        left: 2em;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        grid-column: 4;
+        grid-row: 3;
+    }
+}
+.figure{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 100px;
+    text-decoration: none;
     &__header{
         text-decoration: none;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
+        grid-column: 1/5;
+        grid-row: 1/2;
+        }
     &__img{
         object-fit: cover;
         object-position: 50% 60%;
@@ -57,115 +73,27 @@
         height: $imgHeight;
         border-top-left-radius: $borderRadius;
         border-top-right-radius: $borderRadius;
-        @media screen and (min-width: 739px){
-            height: $imgHeight+1;
-            object-position: 50% 50%;
-        }
     }
     &__new{
-        @include insert-new;
-        display: grid;
-        grid-column-start: 4;
-        grid-row: 1;
-        z-index: 2;
-        max-width: 60px;
-        max-height: 20px;
-        align-self: center;
-    }
-    &__subtitle{
-        display: flex;
-        align-items: center;
         text-decoration: none;
-        color: $text-color--default;
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row: 3;
-        max-height: $figCapHeight;
-        padding: $figCapPadding;
-    }
-    &__like{
-        position: relative;
-        left: 20px;
-        grid-column-start: 4;
-        grid-row: 3;
-    }
-}
-
-.FigureCaption{
-    &__title{
-        margin-top: $figCapMarginTop;
-        margin-bottom: $figCapMarginBottom;
-    }
-    &__subtitle{
-        margin-top: $figCapMarginTop;
-    }
-}
-
-/*
-.card{ 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 50px;
-    grid-template-rows: 1fr 1fr 1fr;
-    text-decoration: none;
-    color: $text-color--default;
-    background-color: $background-color--default;
-    border-radius: $borderRadius;
-    margin-bottom: $cardMarginBottom;
-    height: $cardHeight;
-    width: 100%;
-    @include shadow;
-    @media screen and (min-width: 739px){
-        height: $cardHeight+2;
-    }
-    &__figure{
-        grid-column-start:1 ;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: span 3;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 100px;
-        grid-template-rows: 0.5fr 1fr 0.7fr;
-        margin: $margin-default;
-    }
-    &__img{
-        object-fit: cover;
-        object-position: 50% 75%;
-        width: $width-default;
-        height: $imgHeight;
-        border-top-left-radius: $borderRadius;
-        border-top-right-radius: $borderRadius;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: span 2;
-        @media screen and (min-width: 739px){
-            height: $imgHeight+2;
-            object-position: 50% 50%;
-        }
-    }
-    &__FigureCaption{
-        max-height: $figCapHeight;
-        padding: $figCapPadding;
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: center;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row: 3;
-    }
-    &__like{
+        @include insert-new;
         grid-column: 4;
+        grid-row: 1;
+        margin-top: 1em;
+    }
+    &__caption{
+        color: $text-color--default;
+        grid-column: 1/4;
         grid-row: 3;
     }
 }
-
 .FigureCaption{
+    display: flex;
+    flex-direction: column;
     &__title{
-        margin-top: $figCapMarginTop;
-        margin-bottom: $figCapMarginBottom;
+        margin: 0.5em 0 0 0.5em;
     }
     &__subtitle{
-        margin-top: $figCapMarginTop;
+        margin: 0.5em 0 0 0.5em;
     }
 }
-*/

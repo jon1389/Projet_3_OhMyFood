@@ -43,6 +43,8 @@
 }
 
 @mixin insert-new {
+    width: 60px;
+    height: 20px;
     padding: 5px 15px;
     border-radius: 0.1em;
     background-color: $colour-tertiary;
