@@ -9,6 +9,7 @@
         padding: 1em 3em 2em 3em;
         margin: $restaurant-margin;
         border-radius: $borderRadius*1.5;
+        @include shadow;
     }
     &__title{
         align-self: start;
