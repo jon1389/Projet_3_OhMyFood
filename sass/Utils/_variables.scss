@@ -34,6 +34,7 @@ $font-size: 1em;
 //loader
 $loaderHeight: 80px;
 $loaderBackground: #E8FEF9;
+$loader-anim-dur: 1500ms;
 $num-icons:3;
 $loader-duration: 750ms;
 $loader-delay: $loader-duration / $num-icons;

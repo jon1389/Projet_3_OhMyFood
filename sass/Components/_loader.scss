@@ -10,7 +10,7 @@
     align-items:center;
     justify-content:center;
     animation: loader;
-    animation-delay: $anim-duration*2;
+    animation-delay: $loader-anim-dur;
     animation-fill-mode: both;
     &__icon{
         height: $loaderHeight;

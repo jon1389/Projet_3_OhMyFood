@@ -297,7 +297,7 @@ body {
   align-items: center;
   justify-content: center;
   animation: loader;
-  animation-delay: 2000ms;
+  animation-delay: 1500ms;
   animation-fill-mode: both;
 }
 
