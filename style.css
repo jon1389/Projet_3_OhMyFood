@@ -75,6 +75,10 @@ body {
   color: white;
 }
 
+:focus {
+  outline: none;
+}
+
 @keyframes appearance {
   0% {
     transform: translateY(15px);
@@ -122,6 +126,7 @@ body {
 }
 
 .likeButton__icon {
+  cursor: pointer;
   padding-right: 0.5em;
   z-index: 20;
   font-size: 2em;
@@ -140,6 +145,10 @@ body {
 
 .likeButton__unlike:hover {
   opacity: 0;
+}
+
+.likeButton__unlike:focus {
+  outline: none;
 }
 
 .likeButton__like {
@@ -170,6 +179,7 @@ body {
   padding: 0 7px;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .location__icon:hover {
@@ -736,6 +746,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition-duration: 500ms;
   background-color: #99e2d0;
   height: 80px;

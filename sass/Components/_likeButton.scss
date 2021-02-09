@@ -3,6 +3,7 @@
     background-color: transparent;
 
     &__icon{
+        cursor: pointer;
         padding-right: $iconPaddingRight;
         z-index: 20;
         font-size: $font-size+1;
@@ -17,7 +18,10 @@
         }
         &:hover{
             opacity: 0;
-        }        
+        } 
+        &:focus{
+            outline: none;
+        }       
     }
     &__like{
         background-image: -webkit-linear-gradient($colour-primary, $colour-secondary);

@@ -71,3 +71,7 @@ body{
         color: $background-color--default;
     }
 }
+
+:focus{
+    outline: none;
+}
